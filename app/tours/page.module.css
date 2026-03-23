@@ -1,0 +1,251 @@
+/* ========== TOURS HERO ========== */
+.hero {
+  background: linear-gradient(135deg, #1A1A2E 0%, #2D2D44 50%, #2EC4B6 100%);
+  padding: 140px 0 80px;
+  text-align: center;
+  color: var(--white);
+  position: relative;
+}
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+.hero h1 i { margin-right: 10px; }
+.hero p {
+  font-size: 1.15rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.heroWave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+}
+.heroWave svg {
+  display: block;
+  width: 100%;
+  height: 60px;
+}
+
+/* ========== COMBINED TOUR ========== */
+.combinedTour {
+  padding: 80px 0;
+  background: linear-gradient(135deg, var(--dark) 0%, var(--dark-light) 100%);
+  text-align: center;
+}
+.combinedVideo {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  background: var(--dark);
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* ========== SHARED TOUR ELEMENTS ========== */
+.playButton {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  box-shadow: 0 4px 20px rgba(255, 107, 53, 0.4);
+  transition: var(--transition);
+  cursor: pointer;
+}
+.playButton:hover {
+  transform: scale(1.1);
+}
+.tourLabel {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  color: var(--white);
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 2;
+}
+.tourHint {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--white);
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 2;
+  white-space: nowrap;
+}
+
+/* ========== INDIVIDUAL TOUR SECTIONS ========== */
+.tourSection {
+  padding: 80px 0;
+}
+.tourSectionAlt {
+  background: var(--gray-100);
+}
+
+.branchBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 22px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--white);
+  margin-bottom: 14px;
+}
+.branchBadge.marina { background: var(--marina-color); }
+.branchBadge.downtown { background: var(--downtown-color); }
+.branchBadge.jumeirah { background: var(--jumeirah-color); }
+
+.tourLayout {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+.tourLayoutReverse {
+  grid-template-columns: 1fr 1.4fr;
+}
+.tourLayoutReverse .tourVideoArea {
+  order: 2;
+}
+.tourLayoutReverse .tourDetails {
+  order: 1;
+}
+
+.tourVideoArea {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  background: var(--dark);
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tourDetails h2 {
+  color: var(--dark);
+  font-size: 2rem;
+  margin-bottom: 14px;
+}
+.tourDetails > p {
+  color: var(--gray-500);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+.tourAddress {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--gray-500);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+.tourAddress i {
+  color: var(--primary);
+}
+
+.tourHighlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+.tourHighlight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: var(--gray-100);
+  border-radius: var(--radius-sm);
+}
+.tourSectionAlt .tourHighlight {
+  background: var(--white);
+}
+.tourHighlight i {
+  color: var(--primary);
+  font-size: 1.1rem;
+  width: 20px;
+  text-align: center;
+}
+.tourHighlight span {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--gray-700);
+}
+
+.tourActions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ========== BOOK CTA ========== */
+.bookCta {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #FF6B35, #2EC4B6);
+  text-align: center;
+}
+.bookCta h2 {
+  color: var(--white);
+  font-size: 2.5rem;
+  margin-bottom: 14px;
+}
+.bookCta p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.15rem;
+  max-width: 550px;
+  margin: 0 auto 32px;
+}
+.bookCtaButtons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.2rem; }
+  .tourLayout,
+  .tourLayoutReverse {
+    grid-template-columns: 1fr;
+  }
+  .tourLayoutReverse .tourVideoArea,
+  .tourLayoutReverse .tourDetails {
+    order: unset;
+  }
+  .tourHighlights { grid-template-columns: 1fr; }
+  .bookCta h2 { font-size: 1.8rem; }
+}

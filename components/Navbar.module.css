@@ -1,0 +1,110 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: transparent;
+  padding: 16px 0;
+  transition: var(--transition);
+}
+.scrolled {
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(10px);
+  padding: 10px 0;
+  box-shadow: var(--shadow-sm);
+}
+.navContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--white);
+}
+.scrolled .logo {
+  color: var(--dark);
+}
+.logoIcon {
+  font-size: 1.8rem;
+}
+.logoAccent {
+  color: var(--primary);
+}
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.navLinks a {
+  color: rgba(255,255,255,0.9);
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.scrolled .navLinks a {
+  color: var(--gray-700);
+}
+.navLinks a:hover {
+  color: var(--primary);
+  background: rgba(255,107,53,0.08);
+}
+.navCta {
+  background: var(--primary) !important;
+  color: var(--white) !important;
+  border-radius: 50px !important;
+  padding: 10px 22px !important;
+}
+.navCta:hover {
+  background: var(--primary-dark) !important;
+  transform: translateY(-1px);
+}
+.navToggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+.navToggle span {
+  width: 26px;
+  height: 3px;
+  background: var(--white);
+  border-radius: 3px;
+  transition: var(--transition);
+}
+.scrolled .navToggle span {
+  background: var(--dark);
+}
+
+@media (max-width: 768px) {
+  .navToggle { display: flex; }
+  .navLinks {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: var(--shadow-lg);
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+  }
+  .navLinksActive { display: flex !important; }
+  .navLinks a { color: var(--gray-700) !important; }
+}

@@ -1,0 +1,92 @@
+.float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 999;
+}
+.toggle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--whatsapp);
+  border: none;
+  color: var(--white);
+  font-size: 1.8rem;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 30px rgba(37,211,102,0.5);
+}
+.popup {
+  position: absolute;
+  bottom: 75px;
+  right: 0;
+  width: 300px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px) scale(0.95);
+  transition: var(--transition);
+}
+.popupActive {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+.popupHeader {
+  background: var(--whatsapp);
+  padding: 18px 20px;
+  color: var(--white);
+}
+.popupHeader h5 {
+  font-weight: 800;
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+.popupHeader p {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+.branch {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--gray-100);
+  transition: var(--transition);
+}
+.branch:hover {
+  background: var(--gray-100);
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.marina { background: var(--marina-color); }
+.downtown { background: var(--downtown-color); }
+.jumeirah { background: var(--jumeirah-color); }
+.branch div { flex: 1; }
+.branch strong {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--dark);
+}
+.branch small {
+  font-size: 0.78rem;
+  color: var(--gray-500);
+}
+.branch i {
+  color: var(--whatsapp);
+  font-size: 1.3rem;
+}
