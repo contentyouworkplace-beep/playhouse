@@ -1,0 +1,316 @@
+/* ========== BRANCH PAGE STYLES ========== */
+.hero {
+  position: relative;
+  padding: 160px 0 100px;
+  text-align: center;
+  color: var(--white);
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+.heroContent {
+  position: relative;
+  z-index: 2;
+}
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+.hero p {
+  font-size: 1.15rem;
+  opacity: 0.92;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.heroBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 22px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--white);
+  margin-bottom: 18px;
+}
+.heroWave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+.heroWave svg {
+  display: block;
+  width: 100%;
+  height: 60px;
+}
+
+/* ========== INFO SECTION ========== */
+.infoSection {
+  padding: 80px 0;
+}
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+.infoContent h2 {
+  font-family: var(--font-display);
+  color: var(--dark);
+  font-size: 2rem;
+  margin-bottom: 18px;
+}
+.infoContent > p {
+  color: var(--gray-500);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+.address {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--gray-500);
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+.address i {
+  color: var(--primary);
+}
+
+.highlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+.highlight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  background: var(--gray-100);
+  border-radius: var(--radius-sm);
+}
+.highlight i {
+  color: var(--primary);
+  font-size: 1.1rem;
+  width: 20px;
+  text-align: center;
+}
+.highlight span {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--gray-700);
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ========== DETAILS SIDEBAR ========== */
+.detailsCard {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+.detailsHeader {
+  padding: 28px 24px;
+  text-align: center;
+  color: var(--white);
+}
+.detailsBody {
+  padding: 28px;
+}
+.detailsList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+}
+.detailsList li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--gray-100);
+  font-size: 0.92rem;
+  color: var(--gray-700);
+}
+.detailsList li:last-child {
+  border-bottom: none;
+}
+.detailsList i {
+  color: var(--primary);
+  width: 20px;
+  text-align: center;
+}
+
+/* ========== PROGRAMS ========== */
+.programsSection {
+  padding: 80px 0;
+  background: var(--gray-100);
+}
+.programsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+.programCard {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+.programCard:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+.programIcon {
+  font-size: 3rem;
+  margin-bottom: 14px;
+}
+.programCard h4 {
+  color: var(--dark);
+  margin-bottom: 4px;
+}
+.programAge {
+  display: inline-block;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+.programCard p {
+  font-size: 0.88rem;
+  color: var(--gray-500);
+  line-height: 1.6;
+}
+
+/* ========== GALLERY STRIP ========== */
+.galleryStrip {
+  padding: 80px 0;
+}
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 40px;
+}
+.galleryItem {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  position: relative;
+}
+.galleryItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+.galleryItem:hover img {
+  transform: scale(1.05);
+}
+
+/* ========== TOUR EMBED ========== */
+.tourSection {
+  padding: 80px 0;
+  background: linear-gradient(135deg, var(--dark) 0%, var(--dark-light) 100%);
+}
+.tourEmbed {
+  max-width: 900px;
+  margin: 40px auto 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  background: var(--dark);
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.tourLabel {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  color: white;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 2;
+}
+.playButton {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  box-shadow: 0 4px 20px rgba(255, 107, 53, 0.4);
+  transition: var(--transition);
+  cursor: pointer;
+}
+.playButton:hover {
+  transform: scale(1.1);
+}
+
+/* ========== CTA ========== */
+.ctaSection {
+  padding: 80px 0;
+  text-align: center;
+}
+.ctaSection h2 {
+  font-family: var(--font-display);
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 14px;
+}
+.ctaSection p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.15rem;
+  max-width: 550px;
+  margin: 0 auto 32px;
+}
+.ctaButtons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1024px) {
+  .infoGrid { grid-template-columns: 1fr; }
+  .programsGrid { grid-template-columns: repeat(2, 1fr); }
+  .galleryGrid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.2rem; }
+  .highlights { grid-template-columns: 1fr; }
+  .programsGrid { grid-template-columns: 1fr; }
+  .galleryGrid { grid-template-columns: 1fr; }
+}

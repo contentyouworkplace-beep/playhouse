@@ -1,0 +1,158 @@
+/* ========== STAFF HERO ========== */
+.hero {
+  background: linear-gradient(135deg, #2EC4B6 0%, #1FA99C 60%, #FF6B35 100%);
+  padding: 140px 0 80px;
+  text-align: center;
+  color: var(--white);
+  position: relative;
+}
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+.hero p {
+  font-size: 1.15rem;
+  opacity: 0.9;
+  max-width: 550px;
+  margin: 0 auto;
+}
+.heroWave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+}
+.heroWave svg {
+  display: block;
+  width: 100%;
+  height: 60px;
+}
+
+/* ========== STAFF SECTIONS ========== */
+.staffSection {
+  padding: 80px 0;
+}
+.staffSectionAlt {
+  background: var(--gray-100);
+}
+
+.branchLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 18px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--white);
+  margin-bottom: 14px;
+}
+.branchLabel.marina { background: var(--marina-color); }
+.branchLabel.downtown { background: var(--downtown-color); }
+.branchLabel.jumeirah { background: var(--jumeirah-color); }
+
+/* ========== STAFF GRID ========== */
+.leadershipGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 28px;
+  margin-top: 40px;
+}
+.staffGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 28px;
+  margin-top: 40px;
+}
+
+/* ========== STAFF CARD (Kids Spot Inspired) ========== */
+.staffCard {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  text-align: center;
+}
+.staffCard:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+}
+.staffPhoto {
+  width: 100%;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.leadershipCard .staffPhoto {
+  height: 320px;
+}
+.staffEmoji {
+  font-size: 5rem;
+  z-index: 1;
+}
+.staffInfo {
+  padding: 24px;
+}
+.staffInfo h4 {
+  color: var(--dark);
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+.staffRole {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+  display: block;
+}
+.staffInfo p {
+  font-size: 0.88rem;
+  color: var(--gray-500);
+  line-height: 1.6;
+}
+.staffQuals {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.staffQual {
+  background: var(--primary-light);
+  color: var(--primary);
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* ========== JOIN CTA ========== */
+.joinCta {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #FF6B35, #2EC4B6);
+  text-align: center;
+}
+.joinCta h2 {
+  color: var(--white);
+  font-size: 2.2rem;
+  margin-bottom: 14px;
+}
+.joinCta p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  max-width: 500px;
+  margin: 0 auto 28px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.2rem; }
+  .staffGrid,
+  .leadershipGrid { grid-template-columns: 1fr; }
+}
