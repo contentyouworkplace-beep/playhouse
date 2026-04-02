@@ -1,4 +1,15 @@
+import type { Metadata } from "next";
 import styles from "./page.module.css";
+import { buildMetadata } from "@/lib/seo";
+
+export const revalidate = 86400;
+
+export const metadata: Metadata = buildMetadata({
+  title: "Our Team | Hadeed Transport UAE",
+  description: "Meet the professional team behind Hadeed Transport. Experienced logistics experts serving UAE since 2015.",
+  path: "/staff",
+  keywords: ["Hadeed Transport team", "logistics experts UAE", "transport professionals Dubai"],
+});
 
 const leadership = [
   {
@@ -51,10 +62,6 @@ const branches = [
     ],
   },
 ];
-
-export const metadata = {
-  title: "Our Team | Playhouse Nursery Dubai",
-};
 
 export default function StaffPage() {
   return (

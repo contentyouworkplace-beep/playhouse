@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import styles from "./Navbar.module.css";
 
@@ -26,10 +27,14 @@ export default function Navbar() {
     <nav className={navClass}>
       <div className={styles.navContainer}>
         <Link href="/" className={styles.logo}>
-          <span className={styles.logoIcon}>🏠</span>
-          <span>
-            Playhouse<span className={styles.logoAccent}>Nursery</span>
-          </span>
+          <Image
+            src="/het-logo.png"
+            alt="HET - Hadeed Transport Logo"
+            width={120}
+            height={50}
+            priority
+            style={{ objectFit: "contain" }}
+          />
         </Link>
         <button
           className={styles.navToggle}

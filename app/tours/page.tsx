@@ -1,5 +1,16 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import styles from "./page.module.css";
+import { buildMetadata } from "@/lib/seo";
+
+export const revalidate = 3600;
+
+export const metadata: Metadata = buildMetadata({
+  title: "Virtual Tours | Hadeed Transport UAE",
+  description: "Take a virtual tour of Hadeed Transport branches across UAE. Explore our logistics hubs, equipment yards, and offices.",
+  path: "/tours",
+  keywords: ["virtual tour UAE", "logistics facility tour", "Hadeed Transport branches"],
+});
 
 const branchTours = [
   {
@@ -57,10 +68,6 @@ const branchTours = [
     reverse: false,
   },
 ];
-
-export const metadata = {
-  title: "Virtual Tours | Playhouse Nursery Dubai",
-};
 
 export default function ToursPage() {
   return (

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
+  <defs>
+    <linearGradient id="lg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e40af"/>
+      <stop offset="100%" style="stop-color:#0891b2"/>
+    </linearGradient>
+  </defs>
+  <!-- Icon -->
+  <rect x="4" y="10" width="60" height="60" rx="12" fill="url(#lg)"/>
+  <path d="M34 20 C34 20 22 36 22 43 C22 51 27 56 34 56 C41 56 46 51 46 43 C46 36 34 20 34 20Z" fill="white" opacity="0.95"/>
+  <path d="M34 28 C34 28 27 38 27 43 C27 47 30 50 34 50 C38 50 41 47 41 43 C41 38 34 28 34 28Z" fill="url(#lg)" opacity="0.3"/>
+  <!-- Text -->
+  <text x="74" y="38" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="22" fill="#1e3a5f">India</text>
+  <text x="74" y="60" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="18" fill="#0891b2">Waterproofing</text>
+</svg>

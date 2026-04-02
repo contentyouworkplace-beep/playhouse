@@ -2,6 +2,9 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
 import styles from "./page.module.css";
+import { buildMetadata, breadcrumbSchema, serviceSchema } from "@/lib/seo";
+
+export const revalidate = 3600;
 
 const branches: Record<string, {
   name: string;
@@ -120,10 +123,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const branch = branches[slug];
   if (!branch) return { title: "Branch Not Found" };
-  return {
-    title: `${branch.name} | Playhouse Nursery Dubai`,
-    description: branch.tagline,
-  };
+  return buildMetadata({
+    title: `${branch.name} | Transport & Logistics UAE`,
+    description: `${branch.tagline} — Hadeed Transport serves the UAE with reliable logistics, equipment rental, and transport solutions.`,
+    path: `/branches/${slug}`,
+    keywords: ["transport UAE", "logistics", branch.name, slug, "Hadeed Transport", "equipment rental UAE"],
+  });
 }
 
 export default async function BranchPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -131,8 +136,23 @@ export default async function BranchPage({ params }: { params: Promise<{ slug: s
   const branch = branches[slug];
   if (!branch) notFound();
 
+  const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://hadeed-transport.com";
+  const breadcrumb = breadcrumbSchema([
+    { name: "Home", item: "/" },
+    { name: "Branches", item: "/branches" },
+    { name: branch.name, item: `/branches/${slug}` },
+  ]);
+  const service = serviceSchema({
+    name: branch.name,
+    description: branch.tagline,
+    url: `/branches/${slug}`,
+    areaServed: ["Dubai", "UAE"],
+  });
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(service) }} />
       {/* ========== HERO ========== */}
       <section
         className={styles.hero}
