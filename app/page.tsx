@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Quiz from "@/components/Quiz";
 import Counter from "@/components/Counter";
+import HeroSlider from "@/components/HeroSlider";
 import styles from "./page.module.css";
 
 export default function HomePage() {
@@ -8,27 +9,34 @@ export default function HomePage() {
     <>
       {/* ========== HERO ========== */}
       <section className={styles.hero} id="home">
+        <HeroSlider />
         <div className={styles.heroOverlay} />
         <div className={styles.heroContent}>
+          <p className={styles.heroEyebrow}>KHDA Approved · British EYFS Curriculum</p>
           <h1 className={styles.heroTitle}>
-            Where Little Stars <span className={styles.highlight}>Shine Bright</span> in Dubai
+            Where Every Child<br />
+            <span className={styles.highlight}>Blossoms &amp; Thrives</span>
           </h1>
           <p className={styles.heroSubtitle}>
-            A nurturing, world-class nursery experience across 3 branches in Dubai. British &amp; EYFS curriculum designed to inspire young minds.
+            A nurturing, world-class nursery experience across 3 branches in Dubai.
+            British &amp; EYFS curriculum designed to inspire young minds — ages 45 days to 6 years.
           </p>
           <div className={styles.heroBadges}>
             <span className={styles.badge}><i className="fas fa-award" /> KHDA Approved</span>
             <span className={styles.badge}><i className="fas fa-globe" /> British Curriculum</span>
             <span className={styles.badge}><i className="fas fa-heart" /> Ages 45 days – 6 years</span>
+            <span className={styles.badge}><i className="fas fa-map-marker-alt" /> 3 Branches in Dubai</span>
           </div>
           <div className={styles.heroButtons}>
-            <a href="#quiz" className="btn btn-primary btn-lg">Find the Best Fit for Your Child</a>
-            <a href="#tours" className="btn btn-outline btn-lg">Take a Virtual Tour</a>
+            <a href="#contact" className="btn btn-primary btn-lg">Book a Visit</a>
+            <a href="/WELCOME TO PLAYHOUSE NURSERY brochure.pptx" download className="btn btn-outline btn-lg">
+              <i className="fas fa-download" /> Download Brochure
+            </a>
           </div>
         </div>
         <div className={styles.heroWave}>
-          <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-            <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,70 1440,60 L1440,120 L0,120 Z" fill="#fff" />
+          <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path d="M0,50 C360,100 720,0 1080,50 C1260,75 1380,60 1440,50 L1440,100 L0,100 Z" fill="var(--cream)" />
           </svg>
         </div>
       </section>
@@ -57,13 +65,40 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ========== CURRICULUM ========== */}
+      <section className={styles.curriculumSection} id="curriculum">
+        <div className="container">
+          <div className="section-header">
+            <span className="section-tag">Our Curriculum</span>
+            <h2>A British EYFS Foundation for Life</h2>
+            <p>We follow the UK Early Years Foundation Stage framework — a proven, play-based approach that develops the whole child across 7 areas of learning.</p>
+          </div>
+          <div className={styles.curriculumGrid}>
+            {[
+              { icon: "📚", title: "7 Areas of Learning", desc: "Communication, physical development, personal & social skills, literacy, maths, understanding the world, and expressive arts." },
+              { icon: "🌱", title: "Play-Based Learning", desc: "Children learn best through play. Our child-led approach sparks curiosity, creativity, and a lifelong love of discovery." },
+              { icon: "🌍", title: "Bilingual Environment", desc: "English as the primary language of instruction, with Arabic and French exposure woven throughout daily routines." },
+              { icon: "👩‍🏫", title: "Qualified British Teachers", desc: "All lead educators hold UK Early Childhood qualifications or equivalent — passionate professionals deeply committed to your child." },
+              { icon: "📱", title: "Daily Parent Reports", desc: "Stay connected with real-time updates, photos, and milestone tracking through our parent app — full transparency every day." },
+              { icon: "🏅", title: "KHDA Approved", desc: "Fully licensed and inspected by the Knowledge and Human Development Authority, ensuring the highest standards of care and education." },
+            ].map((c) => (
+              <div key={c.title} className={styles.curriculumCard}>
+                <div className={styles.curriculumIcon}>{c.icon}</div>
+                <h4>{c.title}</h4>
+                <p>{c.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ========== QUIZ ========== */}
       <section className={styles.quizSection} id="quiz">
         <div className="container">
           <div className="section-header">
-            <span className="section-tag">Personalized Experience</span>
-            <h2>Find the Perfect Fit for Your Child</h2>
-            <p>Answer a few quick questions and we&apos;ll recommend the best Playhouse branch and program for your little one.</p>
+            <span className="section-tag">Find Your Fit</span>
+            <h2>Which Playhouse Branch Is Right for You?</h2>
+            <p>Answer a few quick questions and we&apos;ll recommend the best Playhouse branch and programme for your little one.</p>
           </div>
           <Quiz />
         </div>
@@ -119,16 +154,17 @@ export default function HomePage() {
       </section>
 
       {/* ========== PRINCIPAL ========== */}
-      <section className={styles.principal}>
+      <section className={styles.principal} id="awards">
         <div className="container">
           <div className={styles.principalGrid}>
             <div className={styles.principalVideo}>
-              <div className={styles.videoPlaceholder}>
+              <div className={styles.videoPlaceholder} style={{ position: "relative" }}>
+                <img src="/images/gallery/eid.jpg" alt="Playhouse Nursery" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
                 <div className={styles.playButton}><i className="fas fa-play" /></div>
               </div>
             </div>
             <div className={styles.principalContent}>
-              <span className="section-tag">From Our Principal</span>
+              <span className="section-tag">From Our Founder</span>
               <h2>A Message from Our Founder</h2>
               <p className={styles.principalQuote}>
                 &ldquo;At Playhouse Nursery, we believe every child is unique and deserves an environment where they can explore, learn, and grow at their own pace. Our Dubai-based centers are designed to be homes away from home, where children build confidence, creativity, and a love for learning.&rdquo;
@@ -156,12 +192,13 @@ export default function HomePage() {
           </div>
           <div className={styles.toursGrid}>
             {[
-              { name: "Playhouse Marina", loc: "Dubai Marina, Al Sahab Tower", f1: "Rooftop Garden", f1i: "fa-tree", f2: "Splash Zone", f2i: "fa-swimming-pool", slug: "marina" },
-              { name: "Playhouse Downtown", loc: "Business Bay, Executive Tower", f1: "Art Studio", f1i: "fa-palette", f2: "Music Room", f2i: "fa-music", slug: "downtown" },
-              { name: "Playhouse Jumeirah", loc: "Jumeirah 1, Beach Road Villa", f1: "Nature Garden", f1i: "fa-seedling", f2: "Library Corner", f2i: "fa-book", slug: "jumeirah" },
+              { name: "Playhouse Marina", loc: "Dubai Marina, Al Sahab Tower", f1: "Rooftop Garden", f1i: "fa-tree", f2: "Splash Zone", f2i: "fa-swimming-pool", slug: "marina", img: "/images/gallery/outdoor-play.jpg" },
+              { name: "Playhouse Downtown", loc: "Business Bay, Executive Tower", f1: "Art Studio", f1i: "fa-palette", f2: "Music Room", f2i: "fa-music", slug: "downtown", img: "/images/gallery/sensory-play.jpg" },
+              { name: "Playhouse Jumeirah", loc: "Jumeirah 1, Beach Road Villa", f1: "Nature Garden", f1i: "fa-seedling", f2: "Library Corner", f2i: "fa-book", slug: "jumeirah", img: "/images/gallery/nature-garden.jpg" },
             ].map((b) => (
               <div key={b.slug} className={styles.tourCard}>
-                <div className={styles.tourPreview}>
+                <div className={styles.tourPreview} style={{ position: "relative" }}>
+                  <img src={b.img} alt={b.name} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
                   <div className={styles.tour360Badge}><i className="fas fa-vr-cardboard" /> 360°</div>
                   <div className={styles.playButton}><i className="fas fa-play" /></div>
                 </div>
@@ -184,11 +221,12 @@ export default function HomePage() {
       </section>
 
       {/* ========== PROGRAMS ========== */}
-      <section className={styles.programs}>
+      <section className={styles.programs} id="programs">
         <div className="container">
           <div className="section-header">
-            <span className="section-tag">Our Programs</span>
+            <span className="section-tag">Our Programmes</span>
             <h2>Tailored Learning for Every Age</h2>
+            <p>From babies to kindergarten — each stage is thoughtfully designed around British EYFS principles.</p>
           </div>
           <div className={styles.programsGrid}>
             {[
@@ -218,11 +256,11 @@ export default function HomePage() {
           <div className={styles.galleryGrid}>
             {[
               { label: "Outdoor Play Area", img: "/images/gallery/outdoor-play.jpg", large: true },
-              { label: "Art Class", img: "/images/gallery/art-class.jpg" },
-              { label: "Story Time", img: "/images/gallery/story-time.jpg" },
-              { label: "Music & Dance", img: "/images/gallery/music-room.jpg" },
-              { label: "Science Discovery", img: "/images/gallery/science.jpg" },
-              { label: "Graduation Day", img: "/images/gallery/graduation.jpg" },
+              { label: "Art & Craft", img: "/images/gallery/art-class.jpg" },
+              { label: "Sensory Play", img: "/images/gallery/sensory-play.jpg" },
+              { label: "Eid Celebration", img: "/images/gallery/eid.jpg" },
+              { label: "Nature Garden", img: "/images/gallery/nature-garden.jpg" },
+              { label: "National Day", img: "/images/gallery/national-day.jpg" },
             ].map((g) => (
               <div key={g.label} className={`${styles.galleryItem} ${g.large ? styles.galleryItemLarge : ""}`}>
                 <div className={styles.galleryPlaceholder} style={{ position: "relative", overflow: "hidden" }}>

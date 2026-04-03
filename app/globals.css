@@ -1,38 +1,47 @@
 /* ============================================
    PLAYHOUSE NURSERY DUBAI — GLOBAL STYLES
+   Miss Daisy-inspired palette + Kids Spot structure
    ============================================ */
 
 :root {
-  --primary: #FF6B35;
-  --primary-dark: #E55A2B;
-  --primary-light: #FFF3ED;
-  --secondary: #2EC4B6;
-  --secondary-dark: #1FA99C;
-  --accent-gold: #D4A843;
-  --accent-purple: #7B61FF;
-  --dark: #1A1A2E;
-  --dark-light: #2D2D44;
+  /* --- Brand Colours (Miss Daisy palette) --- */
+  --primary: #4A7C5F;          /* sage green */
+  --primary-dark: #3A6349;
+  --primary-light: #EDF4EF;
+  --secondary: #C9A84C;        /* warm gold */
+  --secondary-dark: #A8883A;
+  --secondary-light: #FBF5E6;
+  --accent-rose: #D4706A;
+  --cream: #FDFAF5;            /* Miss Daisy cream background */
+
+  /* --- Neutrals --- */
+  --dark: #2D2926;
+  --dark-light: #3E3530;
   --gray-900: #212529;
-  --gray-700: #495057;
-  --gray-500: #6c757d;
-  --gray-300: #dee2e6;
-  --gray-100: #f8f9fa;
+  --gray-700: #4A4540;
+  --gray-500: #7A736D;
+  --gray-300: #DDD8D2;
+  --gray-100: #F5F2EC;
   --white: #ffffff;
+
+  /* --- Branch accent colours --- */
+  --marina-color: #4A7C5F;
+  --downtown-color: #C9A84C;
+  --jumeirah-color: #D4706A;
+
+  /* --- Utility --- */
   --whatsapp: #25D366;
   --whatsapp-dark: #128C7E;
-  --marina-color: #0EA5E9;
-  --downtown-color: #8B5CF6;
-  --jumeirah-color: #10B981;
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
-  --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
-  --shadow-lg: 0 8px 30px rgba(0,0,0,0.12);
-  --shadow-xl: 0 16px 50px rgba(0,0,0,0.15);
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
-  --radius-xl: 28px;
-  --font-main: var(--font-nunito), 'Nunito', sans-serif;
-  --font-display: var(--font-fredoka), 'Fredoka', cursive;
+  --shadow-sm: 0 1px 3px rgba(45,41,38,0.08);
+  --shadow-md: 0 4px 12px rgba(45,41,38,0.1);
+  --shadow-lg: 0 8px 30px rgba(45,41,38,0.12);
+  --shadow-xl: 0 16px 50px rgba(45,41,38,0.15);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --font-main: var(--font-lato), 'Lato', sans-serif;
+  --font-display: var(--font-display), 'Cormorant Garamond', serif;
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -49,9 +58,17 @@ html {
 
 body {
   color: var(--gray-700);
-  line-height: 1.6;
-  background: var(--white);
+  line-height: 1.7;
+  background: var(--cream);
   overflow-x: hidden;
+  font-family: var(--font-main);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--dark);
+  line-height: 1.25;
+  font-weight: 300;
 }
 
 img {
@@ -90,27 +107,32 @@ ul {
   background: var(--primary-light);
   color: var(--primary);
   font-weight: 700;
-  font-size: 0.85rem;
-  padding: 6px 18px;
+  font-size: 0.78rem;
+  padding: 5px 16px;
   border-radius: 50px;
-  margin-bottom: 12px;
-  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
+  font-family: var(--font-main);
 }
 .section-header.light .section-tag {
-  background: rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.18);
   color: var(--white);
 }
 .section-header h2 {
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   color: var(--dark);
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+  font-family: var(--font-display);
+  font-weight: 300;
+  letter-spacing: 0.5px;
 }
 .section-header p {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--gray-500);
   max-width: 600px;
   margin: 0 auto;
+  line-height: 1.8;
 }
 
 /* ---------- Buttons ---------- */
