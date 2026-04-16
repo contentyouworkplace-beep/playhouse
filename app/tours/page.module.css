@@ -121,9 +121,9 @@
   color: var(--white);
   margin-bottom: 14px;
 }
-.branchBadge.marina { background: var(--marina-color); }
-.branchBadge.downtown { background: var(--downtown-color); }
-.branchBadge.jumeirah { background: var(--jumeirah-color); }
+.branchBadge.khalidiya { background: var(--marina-color); }
+.branchBadge.alreem { background: var(--downtown-color); }
+.branchBadge.mirdif { background: var(--jumeirah-color); }
 
 .tourLayout {
   display: grid;

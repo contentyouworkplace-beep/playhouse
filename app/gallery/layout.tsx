@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Gallery | Hadeed Transport UAE",
+  title: "Gallery | Playhouse Nursery UAE",
   description:
-    "Browse the Hadeed Transport gallery — our equipment, vehicles, facilities, and operations across the UAE.",
+    "Browse the Playhouse Nursery gallery — our classrooms, play areas, events, and happy children across all UAE branches.",
   path: "/gallery",
-  keywords: ["Hadeed Transport gallery", "logistics photos UAE", "transport equipment photos"],
+  keywords: ["Playhouse Nursery gallery", "nursery photos UAE", "nursery classroom photos"],
 });
 
 export default function GalleryLayout({ children }: { children: React.ReactNode }) {

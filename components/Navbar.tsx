@@ -7,9 +7,9 @@ import { usePathname } from "next/navigation";
 import styles from "./Navbar.module.css";
 
 const branches = [
-  { name: "Playhouse Marina", slug: "marina", addr: "Dubai Marina, Al Sahab Tower" },
-  { name: "Playhouse Downtown", slug: "downtown", addr: "Business Bay, Executive Tower" },
-  { name: "Playhouse Jumeirah", slug: "jumeirah", addr: "Jumeirah 1, Beach Road Villa" },
+  { name: "Playhouse Khalidiya", slug: "khalidiya", addr: "Al Khalidiya St, Villa 11/8, Abu Dhabi" },
+  { name: "Playhouse Al Reem", slug: "al-reem", addr: "Al Reem Island, Marina Square, Tala Tower G-203" },
+  { name: "Playhouse Mirdif", slug: "mirdif", addr: "Mirdif Hills Avenue Mall, Dubai" },
 ];
 
 const services = [
@@ -85,9 +85,9 @@ export default function Navbar() {
 
           {/* Right side: socials + brochure */}
           <div className={styles.topRight}>
-            <a href="#" aria-label="Facebook" className={styles.socialIcon}><i className="fab fa-facebook-f" /></a>
-            <a href="#" aria-label="Instagram" className={styles.socialIcon}><i className="fab fa-instagram" /></a>
-            <a href="#" aria-label="YouTube" className={styles.socialIcon}><i className="fab fa-youtube" /></a>
+            <a href="https://www.facebook.com/PlayhouseNurseryUAE/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className={styles.socialIcon}><i className="fab fa-facebook-f" /></a>
+            <a href="https://www.instagram.com/playhousenursery.alreem/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className={styles.socialIcon}><i className="fab fa-instagram" /></a>
+            <a href="https://www.youtube.com/@playhouseuae" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className={styles.socialIcon}><i className="fab fa-youtube" /></a>
             <a
               href="/WELCOME TO PLAYHOUSE NURSERY brochure.pptx"
               download
@@ -112,6 +112,7 @@ export default function Navbar() {
               priority
               style={{ objectFit: "contain" }}
             />
+            <span className={styles.logoText}>Playhouse Nursery</span>
           </Link>
 
           {/* Mobile hamburger */}

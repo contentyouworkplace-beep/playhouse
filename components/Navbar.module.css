@@ -169,6 +169,15 @@
   display: flex;
   align-items: center;
   flex-shrink: 0;
+  gap: 10px;
+  text-decoration: none;
+}
+.logoText {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 0.3px;
+  white-space: nowrap;
 }
 
 /* Nav links list */
@@ -286,6 +295,7 @@
   .topbar { display: flex; justify-content: flex-end; }
   .topbarInner { justify-content: flex-end; }
   .topLinks { display: none; }
+  .logoText { font-size: 1rem; }
 
   .hamburger { display: flex; }
   .navLinks {
@@ -302,15 +312,19 @@
     border-top: 3px solid var(--primary);
     z-index: 997;
     gap: 0;
+    max-height: 70vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .mobileOpen { display: flex !important; }
   .navLinks > li > a,
   .dropTrigger {
-    padding: 13px 24px;
+    padding: 14px 24px;
     border-radius: 0;
     font-size: 0.95rem;
     width: 100%;
     text-align: left;
+    min-height: 48px;
   }
   .dropMenu {
     position: static;
@@ -325,6 +339,13 @@
     margin: 10px 24px 0;
     text-align: center;
     justify-content: center;
+    min-height: 48px;
   }
 }
-
+@media (max-width: 480px) {
+  .mainInner { height: 60px; padding: 0 16px; }
+  .logo img { width: 120px !important; height: 50px !important; }
+  .logoText { font-size: 0.9rem; }
+  .brochureBtn { font-size: 0.7rem; padding: 5px 10px; }
+  .topbarInner { padding: 0 12px; }
+}

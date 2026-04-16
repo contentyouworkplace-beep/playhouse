@@ -1,7 +1,7 @@
 // lib/seo.ts — Shared SEO utilities for metadata and JSON-LD
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://hadeed-transport.com";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://playhousenursery.ae";
 
 type MetaOptions = {
   title: string;
@@ -28,7 +28,7 @@ export function buildMetadata({
       title,
       description,
       url,
-      siteName: "Hadeed Transport",
+      siteName: "Playhouse Nursery",
       images: [{ url: `${BASE_URL}${image}`, width: 1200, height: 630, alt: title }],
       type: "website" as const,
       locale: "en_AE",
@@ -52,20 +52,20 @@ export function localBusinessSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "Hadeed Transport",
+    name: "Playhouse Nursery",
     url: BASE_URL,
-    logo: `${BASE_URL}/het-logo.png`,
-    image: `${BASE_URL}/het-logo.png`,
+    logo: `${BASE_URL}/logo.png`,
+    image: `${BASE_URL}/logo.png`,
     description:
-      "Where Logistics Meet Innovation. Reliable transport and logistics services across UAE since 2015.",
-    foundingDate: "2015",
+      "KHDA-approved British EYFS nursery in the UAE. 3 branches: Khalidiya, Al Reem & Mirdif. Ages 45 days to 6 years.",
+    foundingDate: "2011",
     address: {
       "@type": "PostalAddress",
       addressCountry: "AE",
-      addressRegion: "Dubai",
+      addressRegion: "Abu Dhabi",
     },
-    areaServed: ["Dubai", "Abu Dhabi", "Sharjah", "UAE"],
-    sameAs: [],
+    areaServed: ["Abu Dhabi", "Dubai", "UAE"],
+    sameAs: ["https://www.facebook.com/PlayhouseNurseryUAE/", "https://www.instagram.com/playhousenursery.alreem/"],
   };
 }
 
@@ -105,7 +105,7 @@ export function serviceSchema({
     url: url.startsWith("http") ? url : `${BASE_URL}${url}`,
     provider: {
       "@type": "LocalBusiness",
-      name: "Hadeed Transport",
+      name: "Playhouse Nursery",
       url: BASE_URL,
     },
     areaServed: areaServed.map((area) => ({

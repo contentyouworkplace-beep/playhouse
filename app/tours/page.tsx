@@ -6,38 +6,38 @@ import { buildMetadata } from "@/lib/seo";
 export const revalidate = 3600;
 
 export const metadata: Metadata = buildMetadata({
-  title: "Virtual Tours | Hadeed Transport UAE",
-  description: "Take a virtual tour of Hadeed Transport branches across UAE. Explore our logistics hubs, equipment yards, and offices.",
+  title: "Virtual Tours | Playhouse Nursery UAE",
+  description: "Take a virtual tour of Playhouse Nursery branches across UAE. Explore our classrooms, play areas, and facilities.",
   path: "/tours",
-  keywords: ["virtual tour UAE", "logistics facility tour", "Hadeed Transport branches"],
+  keywords: ["virtual tour UAE", "nursery facility tour", "Playhouse Nursery branches"],
 });
 
 const branchTours = [
   {
-    id: "marina",
-    badge: "Marina Branch",
-    color: "marina" as const,
-    name: "Playhouse Marina",
-    address: "Al Sahab Tower, Dubai Marina, Dubai, UAE",
-    desc: "Our flagship Marina branch features modern, purpose-built facilities with stunning views. Children enjoy a blend of indoor and outdoor learning experiences designed to spark curiosity and creativity.",
+    id: "khalidiya",
+    badge: "Khalidiya Branch",
+    color: "khalidiya" as const,
+    name: "Playhouse Khalidiya",
+    address: "Al Khalidiya Street, Villa 11/8, Behind Sheraton Khalidiya Hotel, Abu Dhabi",
+    desc: "Our main Khalidiya branch features spacious classrooms and dedicated outdoor play areas in the heart of Abu Dhabi. Children enjoy a blend of indoor and outdoor learning experiences designed to spark curiosity and creativity.",
     highlights: [
-      { icon: "fa-tree", label: "Rooftop Garden" },
-      { icon: "fa-swimming-pool", label: "Splash Zone" },
+      { icon: "fa-building", label: "Main Campus" },
+      { icon: "fa-tree", label: "Outdoor Play Area" },
       { icon: "fa-utensils", label: "Nutritious Kitchen" },
       { icon: "fa-chalkboard-teacher", label: "Smart Classrooms" },
       { icon: "fa-video", label: "CCTV Access" },
       { icon: "fa-baby", label: "Baby Sensory Room" },
     ],
-    wa: "https://wa.me/971XXXXXXXXX?text=Hi!%20I'd%20like%20to%20book%20a%20visit%20to%20Playhouse%20Marina.",
+    wa: "https://wa.me/971542632235?text=Hi!%20I'd%20like%20to%20book%20a%20visit%20to%20Playhouse%20Khalidiya.",
     reverse: false,
   },
   {
-    id: "downtown",
-    badge: "Downtown Branch",
-    color: "downtown" as const,
-    name: "Playhouse Downtown",
-    address: "Executive Tower, Business Bay, Dubai, UAE",
-    desc: "Located in the bustling heart of Business Bay, our Downtown branch is designed for busy families who want premium early education at their doorstep. Features dedicated creative and STEM zones.",
+    id: "al-reem",
+    badge: "Al Reem Branch",
+    color: "alreem" as const,
+    name: "Playhouse Al Reem",
+    address: "Al Reem Island, Marina Square, Tala Tower, Unit G-203, Abu Dhabi",
+    desc: "Located on the vibrant Al Reem Island, our branch is designed for island families who want premium early education at their doorstep. Features dedicated creative and STEM zones.",
     highlights: [
       { icon: "fa-palette", label: "Art Studio" },
       { icon: "fa-music", label: "Music Room" },
@@ -46,25 +46,25 @@ const branchTours = [
       { icon: "fa-video", label: "CCTV Access" },
       { icon: "fa-parking", label: "Easy Parking" },
     ],
-    wa: "https://wa.me/971XXXXXXXXX?text=Hi!%20I'd%20like%20to%20book%20a%20visit%20to%20Playhouse%20Downtown.",
+    wa: "https://wa.me/971505624547?text=Hi!%20I'd%20like%20to%20book%20a%20visit%20to%20Playhouse%20Al%20Reem.",
     reverse: true,
   },
   {
-    id: "jumeirah",
-    badge: "Jumeirah Branch",
-    color: "jumeirah" as const,
-    name: "Playhouse Jumeirah",
-    address: "Beach Road Villa, Jumeirah 1, Dubai, UAE",
-    desc: "Our charming Jumeirah villa offers a home-like atmosphere with expansive outdoor spaces. Children thrive in our nature-focused environment with a dedicated garden, library corner, and open-air classrooms.",
+    id: "mirdif",
+    badge: "Mirdif Branch",
+    color: "mirdif" as const,
+    name: "Playhouse Mirdif",
+    address: "Mirdif Hills Avenue Mall, Dubai, UAE",
+    desc: "Our Mirdif branch in Dubai offers modern facilities with nature-inspired play areas and convenient mall access. Children thrive in our nurturing environment with dedicated learning zones.",
     highlights: [
       { icon: "fa-seedling", label: "Nature Garden" },
       { icon: "fa-book", label: "Library Corner" },
-      { icon: "fa-home", label: "Villa Setting" },
+      { icon: "fa-store", label: "Mall Location" },
       { icon: "fa-sun", label: "Outdoor Classrooms" },
       { icon: "fa-video", label: "CCTV Access" },
       { icon: "fa-utensils", label: "Organic Meals" },
     ],
-    wa: "https://wa.me/971XXXXXXXXX?text=Hi!%20I'd%20like%20to%20book%20a%20visit%20to%20Playhouse%20Jumeirah.",
+    wa: "https://wa.me/971529821105?text=Hi!%20I'd%20like%20to%20book%20a%20visit%20to%20Playhouse%20Mirdif.",
     reverse: false,
   },
 ];
@@ -91,7 +91,7 @@ export default function ToursPage() {
           <div className="section-header light">
             <span className="section-tag">All Branches</span>
             <h2>Complete Playhouse Experience</h2>
-            <p>Watch our combined 360° tour covering all three branches — Marina, Downtown, and Jumeirah — in one immersive experience.</p>
+            <p>Watch our combined 360° tour covering all three branches — Khalidiya, Al Reem, and Mirdif — in one immersive experience.</p>
           </div>
           <div className={styles.combinedVideo}>
             <div className={styles.tourLabel}><i className="fas fa-vr-cardboard" /> 360° Combined Tour</div>

@@ -18,14 +18,14 @@ export default function HomePage() {
             <span className={styles.highlight}>Blossoms &amp; Thrives</span>
           </h1>
           <p className={styles.heroSubtitle}>
-            A nurturing, world-class nursery experience across 3 branches in Dubai.
+            A nurturing, world-class nursery experience across 3 branches in the UAE.
             British &amp; EYFS curriculum designed to inspire young minds — ages 45 days to 6 years.
           </p>
           <div className={styles.heroBadges}>
             <span className={styles.badge}><i className="fas fa-award" /> KHDA Approved</span>
             <span className={styles.badge}><i className="fas fa-globe" /> British Curriculum</span>
             <span className={styles.badge}><i className="fas fa-heart" /> Ages 45 days – 6 years</span>
-            <span className={styles.badge}><i className="fas fa-map-marker-alt" /> 3 Branches in Dubai</span>
+            <span className={styles.badge}><i className="fas fa-map-marker-alt" /> 3 Branches in UAE</span>
           </div>
           <div className={styles.heroButtons}>
             <a href="#contact" className="btn btn-primary btn-lg">Book a Visit</a>
@@ -47,7 +47,7 @@ export default function HomePage() {
           <div className={styles.statsGrid}>
             <div className={styles.statItem}>
               <span className={styles.statNumber}><Counter target={3} /></span>
-              <span className={styles.statLabel}>Branches in Dubai</span>
+              <span className={styles.statLabel}>Branches in UAE</span>
             </div>
             <div className={styles.statItem}>
               <span className={styles.statNumber}><Counter target={15} /></span>
@@ -127,15 +127,15 @@ export default function HomePage() {
               <div className={styles.videoInfo}>
                 <h4>What Parents Say About Playhouse</h4>
                 <p>&ldquo;Our daughter has thrived beyond our expectations. The teachers truly care about every child&apos;s individual journey.&rdquo;</p>
-                <span className={styles.parentName}>— Saloni, Parent at Playhouse Marina</span>
+                <span className={styles.parentName}>— Saloni, Parent at Playhouse Khalidiya</span>
               </div>
             </div>
           </div>
           <div className={styles.testimonialGrid}>
             {[
-              { quote: "The best decision we made for our family. The care and attention at Playhouse is exceptional.", name: "Sarah A.", branch: "Mother of 2, Marina Branch", initials: "SA" },
-              { quote: "My son learned Arabic and English simultaneously. The bilingual program is outstanding.", name: "Mohammed K.", branch: "Father of 1, Downtown Branch", initials: "MK" },
-              { quote: "Safe, clean, and full of love. The CCTV access gives me peace of mind during work hours.", name: "Lina P.", branch: "Mother of 1, Jumeirah Branch", initials: "LP" },
+              { quote: "The best decision we made for our family. The care and attention at Playhouse is exceptional.", name: "Sarah A.", branch: "Mother of 2, Khalidiya Branch", initials: "SA" },
+              { quote: "My son learned Arabic and English simultaneously. The bilingual program is outstanding.", name: "Mohammed K.", branch: "Father of 1, Al Reem Branch", initials: "MK" },
+              { quote: "Safe, clean, and full of love. The CCTV access gives me peace of mind during work hours.", name: "Lina P.", branch: "Mother of 1, Mirdif Branch", initials: "LP" },
             ].map((t) => (
               <div key={t.initials} className={styles.testimonialCard}>
                 <div className={styles.testimonialStars}>★★★★★</div>
@@ -192,9 +192,9 @@ export default function HomePage() {
           </div>
           <div className={styles.toursGrid}>
             {[
-              { name: "Playhouse Marina", loc: "Dubai Marina, Al Sahab Tower", f1: "Rooftop Garden", f1i: "fa-tree", f2: "Splash Zone", f2i: "fa-swimming-pool", slug: "marina", img: "/images/gallery/outdoor-play.jpg" },
-              { name: "Playhouse Downtown", loc: "Business Bay, Executive Tower", f1: "Art Studio", f1i: "fa-palette", f2: "Music Room", f2i: "fa-music", slug: "downtown", img: "/images/gallery/sensory-play.jpg" },
-              { name: "Playhouse Jumeirah", loc: "Jumeirah 1, Beach Road Villa", f1: "Nature Garden", f1i: "fa-seedling", f2: "Library Corner", f2i: "fa-book", slug: "jumeirah", img: "/images/gallery/nature-garden.jpg" },
+              { name: "Playhouse Khalidiya", loc: "Al Khalidiya St, Villa 11/8, Abu Dhabi", f1: "Main Campus", f1i: "fa-building", f2: "Outdoor Play Area", f2i: "fa-tree", slug: "khalidiya", img: "/images/gallery/outdoor-play.jpg" },
+              { name: "Playhouse Al Reem", loc: "Al Reem Island, Tala Tower G-203", f1: "Art Studio", f1i: "fa-palette", f2: "Sensory Room", f2i: "fa-hand-sparkles", slug: "al-reem", img: "/images/gallery/sensory-play.jpg" },
+              { name: "Playhouse Mirdif", loc: "Mirdif Hills Avenue Mall, Dubai", f1: "Nature Garden", f1i: "fa-seedling", f2: "Library Corner", f2i: "fa-book", slug: "mirdif", img: "/images/gallery/nature-garden.jpg" },
             ].map((b) => (
               <div key={b.slug} className={styles.tourCard}>
                 <div className={styles.tourPreview} style={{ position: "relative" }}>
@@ -286,9 +286,9 @@ export default function HomePage() {
           </div>
           <div className={styles.branchesGrid}>
             {[
-              { name: "Playhouse Marina", icon: "🏙️", color: "marina", addr: "Al Sahab Tower, Dubai Marina", phone: "+971 4 XXX XXXX", email: "marina@playhousenursery.ae", wa: "https://wa.me/971XXXXXXXXX?text=Hi%20Playhouse%20Marina!%20I'd%20like%20to%20know%20more%20about%20your%20nursery.", slug: "marina" },
-              { name: "Playhouse Downtown", icon: "🏛️", color: "downtown", addr: "Executive Tower, Business Bay", phone: "+971 4 XXX XXXX", email: "downtown@playhousenursery.ae", wa: "https://wa.me/971XXXXXXXXX?text=Hi%20Playhouse%20Downtown!%20I'd%20like%20to%20know%20more%20about%20your%20nursery.", slug: "downtown" },
-              { name: "Playhouse Jumeirah", icon: "🌴", color: "jumeirah", addr: "Beach Road Villa, Jumeirah 1", phone: "+971 4 XXX XXXX", email: "jumeirah@playhousenursery.ae", wa: "https://wa.me/971XXXXXXXXX?text=Hi%20Playhouse%20Jumeirah!%20I'd%20like%20to%20know%20more%20about%20your%20nursery.", slug: "jumeirah" },
+              { name: "Playhouse Khalidiya", icon: "🏛️", color: "khalidiya", addr: "Al Khalidiya St, Villa 11/8, Abu Dhabi", phone: "+971 54 263 2235", email: "playhousekhalidiya@gmail.com", wa: "https://wa.me/971542632235?text=Hi%20Playhouse%20Khalidiya!%20I'd%20like%20to%20know%20more%20about%20your%20nursery.", slug: "khalidiya" },
+              { name: "Playhouse Al Reem", icon: "🏙️", color: "alreem", addr: "Al Reem Island, Marina Square, Tala Tower G-203", phone: "+971 50 562 4547", email: "playhousealreem@gmail.com", wa: "https://wa.me/971505624547?text=Hi%20Playhouse%20Al%20Reem!%20I'd%20like%20to%20know%20more%20about%20your%20nursery.", slug: "al-reem" },
+              { name: "Playhouse Mirdif", icon: "🌴", color: "mirdif", addr: "Mirdif Hills Avenue Mall, Dubai", phone: "+971 52 982 1105", email: "playhousemirdif@gmail.com", wa: "https://wa.me/971529821105?text=Hi%20Playhouse%20Mirdif!%20I'd%20like%20to%20know%20more%20about%20your%20nursery.", slug: "mirdif" },
             ].map((b) => (
               <div key={b.color} className={styles.branchCard}>
                 <div className={`${styles.branchHeader} ${styles[b.color]}`}>

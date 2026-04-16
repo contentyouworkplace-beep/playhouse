@@ -16,7 +16,7 @@ export type SeoPage = {
 };
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://hadeed-transport.com";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://playhousenursery.ae";
 
 // Static pages
 const staticPages: SeoPage[] = [

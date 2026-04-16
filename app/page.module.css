@@ -16,7 +16,12 @@
 .heroOverlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.3);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
   z-index: 1;
 }
 .heroContent {
@@ -588,15 +593,15 @@
   padding: 28px 24px;
   text-align: center;
 }
-.branchHeader.marina {
+.branchHeader.khalidiya {
   background: linear-gradient(135deg, #4A7C5F, #3A6349);
   color: var(--white);
 }
-.branchHeader.downtown {
+.branchHeader.alreem {
   background: linear-gradient(135deg, #C9A84C, #A8883A);
   color: var(--white);
 }
-.branchHeader.jumeirah {
+.branchHeader.mirdif {
   background: linear-gradient(135deg, #D4706A, #B85A55);
   color: var(--white);
 }
@@ -646,7 +651,9 @@
 }
 @media (max-width: 768px) {
   .heroTitle { font-size: 2.2rem; }
-  .heroContent { padding: 140px 20px 60px; }
+  .heroContent { padding: 120px 16px 50px; }
+  .heroSubtitle { font-size: 0.95rem; }
+  .badge { font-size: 0.75rem; padding: 7px 12px; }
   .videoCard { grid-template-columns: 1fr; }
   .testimonialGrid { grid-template-columns: 1fr; }
   .galleryGrid { grid-template-columns: repeat(2, 1fr); }
@@ -656,8 +663,14 @@
   .statItem:last-child { border-bottom: none; }
 }
 @media (max-width: 480px) {
-  .heroTitle { font-size: 1.8rem; }
+  .heroTitle { font-size: 1.6rem; }
+  .heroSubtitle { font-size: 0.88rem; line-height: 1.6; }
+  .heroBadges { gap: 8px; }
+  .badge { font-size: 0.72rem; padding: 6px 10px; gap: 5px; }
+  .heroButtons { flex-direction: column; align-items: center; gap: 10px; }
+  .heroButtons .btn { width: 100%; justify-content: center; }
   .statsGrid { grid-template-columns: 1fr; }
   .programsGrid { grid-template-columns: 1fr; }
   .galleryGrid { grid-template-columns: 1fr; }
+  .section-header h2 { font-size: 1.8rem; }
 }

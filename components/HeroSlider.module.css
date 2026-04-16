@@ -6,6 +6,7 @@
 .slide {
   position: absolute;
   inset: 0;
+  filter: blur(2px) brightness(0.85);
 }
 .dots {
   position: absolute;

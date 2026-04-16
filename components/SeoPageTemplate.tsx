@@ -101,7 +101,7 @@ export default function SeoPageTemplate({
 
         {/* Title & Description */}
         <h1 style={{ fontSize: "2.2rem", fontWeight: 800, marginBottom: "16px", color: "#111827" }}>
-          {serviceName} in {location} | Hadeed Transport
+          {serviceName} in {location} | Playhouse Nursery
         </h1>
         <p style={{ fontSize: "1.1rem", lineHeight: 1.75, color: "#374151", marginBottom: "32px" }}>
           {description}

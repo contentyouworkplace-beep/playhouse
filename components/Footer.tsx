@@ -10,7 +10,7 @@ export default function Footer() {
             <h3>Playhouse <span className={styles.accent}>Nursery</span></h3>
             <p>
               Where every child blossoms. KHDA-approved British EYFS nursery
-              across 3 branches in Dubai — Marina, Downtown &amp; Jumeirah.
+              across 3 branches in the UAE — Khalidiya, Al Reem &amp; Mirdif.
               Ages 45 days to 6 years.
             </p>
             <a
@@ -21,10 +21,10 @@ export default function Footer() {
               <i className="fas fa-download" /> Download Brochure
             </a>
             <div className={styles.social}>
-              <a href="#" aria-label="Instagram"><i className="fab fa-instagram" /></a>
-              <a href="#" aria-label="Facebook"><i className="fab fa-facebook-f" /></a>
-              <a href="#" aria-label="YouTube"><i className="fab fa-youtube" /></a>
-              <a href="#" aria-label="TikTok"><i className="fab fa-tiktok" /></a>
+              <a href="https://www.instagram.com/playhousenursery.alreem/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i className="fab fa-instagram" /></a>
+              <a href="https://www.facebook.com/PlayhouseNurseryUAE/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i className="fab fa-facebook-f" /></a>
+              <a href="https://www.youtube.com/@playhouseuae" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i className="fab fa-youtube" /></a>
+              <a href="https://www.tiktok.com/@playhouseuae" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i className="fab fa-tiktok" /></a>
             </div>
           </div>
           <div className={styles.footerLinks}>
@@ -42,9 +42,9 @@ export default function Footer() {
           <div className={styles.footerLinks}>
             <h4>Our Branches</h4>
             <ul>
-              <li><Link href="/branches/marina">Playhouse Marina</Link></li>
-              <li><Link href="/branches/downtown">Playhouse Downtown</Link></li>
-              <li><Link href="/branches/jumeirah">Playhouse Jumeirah</Link></li>
+              <li><Link href="/branches/khalidiya">Playhouse Khalidiya</Link></li>
+              <li><Link href="/branches/al-reem">Playhouse Al Reem</Link></li>
+              <li><Link href="/branches/mirdif">Playhouse Mirdif</Link></li>
               <li><Link href="/#contact">Contact Us</Link></li>
               <li><Link href="/#contact">Registration Steps</Link></li>
             </ul>
