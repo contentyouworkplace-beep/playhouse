@@ -5,9 +5,9 @@ import Image from "next/image";
 import styles from "./HeroSlider.module.css";
 
 const slides = [
-  { src: "/images/hero/hero-1.jpg", alt: "Children in nursery classroom at Playhouse Nursery Dubai" },
-  { src: "/images/hero/hero-2.jpg", alt: "Kids playing outdoors at Playhouse Nursery" },
-  { src: "/images/hero/hero-3.jpg", alt: "Toddler doing art and craft at Playhouse Nursery" },
+  { src: "/images/hero/hero-1.jpg", alt: "Children joyfully learning at Playhouse Nursery" },
+  { src: "/images/hero/hero-2.jpg", alt: "Kids exploring and playing outdoors at Playhouse" },
+  { src: "/images/hero/hero-3.jpg", alt: "Toddler doing creative art and craft at Playhouse Nursery" },
 ];
 
 export default function HeroSlider() {
@@ -18,7 +18,7 @@ export default function HeroSlider() {
   }, []);
 
   useEffect(() => {
-    const timer = setInterval(next, 5000);
+    const timer = setInterval(next, 6000);
     return () => clearInterval(timer);
   }, [next]);
 
@@ -28,7 +28,11 @@ export default function HeroSlider() {
         <div
           key={slide.src}
           className={styles.slide}
-          style={{ opacity: i === current ? 1 : 0, zIndex: i === current ? 2 : 0, visibility: i === current ? 'visible' : 'hidden' }}
+          style={{
+            opacity: i === current ? 1 : 0,
+            zIndex: i === current ? 2 : 0,
+            visibility: i === current ? "visible" : "hidden",
+          }}
         >
           <Image
             src={slide.src}
@@ -36,12 +40,12 @@ export default function HeroSlider() {
             fill
             priority={i === 0}
             sizes="100vw"
-            style={{ objectFit: "cover" }}
+            style={{ objectFit: "cover", objectPosition: "center 30%" }}
           />
         </div>
       ))}
 
-      {/* Dots */}
+      {/* Pill dots */}
       <div className={styles.dots}>
         {slides.map((_, i) => (
           <button

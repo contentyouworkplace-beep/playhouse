@@ -4,21 +4,21 @@ import { useState } from "react";
 import styles from "./page.module.css";
 
 const galleryItems = [
-  { label: "Outdoor Play Area", img: "/images/gallery/outdoor-play.jpg", bg: "linear-gradient(135deg,#FFE0B2,#FFCC80)", category: "marina outdoor", tag: "Marina" },
-  { label: "Art & Craft Session", img: "/images/gallery/art-class.jpg", bg: "linear-gradient(135deg,#B3E5FC,#81D4FA)", category: "downtown art", tag: "Downtown" },
-  { label: "Nature Garden", img: "/images/gallery/nature-garden.jpg", bg: "linear-gradient(135deg,#C8E6C9,#A5D6A7)", category: "jumeirah outdoor", tag: "Jumeirah" },
-  { label: "Sensory Play", img: "/images/gallery/sensory-play.jpg", bg: "linear-gradient(135deg,#F8BBD0,#F48FB1)", category: "marina art", tag: "Marina" },
-  { label: "UAE National Day", img: "/images/gallery/national-day.jpg", bg: "linear-gradient(135deg,#E8F5E9,#00C853)", category: "events", tag: "Events" },
-  { label: "Music & Dance", img: "/images/gallery/music-room.jpg", bg: "linear-gradient(135deg,#D1C4E9,#B39DDB)", category: "downtown", tag: "Downtown" },
-  { label: "Story Time", img: "/images/gallery/story-time.jpg", bg: "linear-gradient(135deg,#FFECB3,#FFE082)", category: "jumeirah", tag: "Jumeirah" },
-  { label: "Splash Zone", img: "/images/gallery/splash-zone.jpg", bg: "linear-gradient(135deg,#B3E5FC,#4FC3F7)", category: "marina outdoor", tag: "Marina" },
-  { label: "Graduation Day", img: "/images/gallery/graduation.jpg", bg: "linear-gradient(135deg,#FFF9C4,#FBC02D)", category: "events", tag: "Events" },
-  { label: "Science Discovery", img: "/images/gallery/science.jpg", bg: "linear-gradient(135deg,#E1F5FE,#03A9F4)", category: "downtown art", tag: "Downtown" },
-  { label: "Yoga & Mindfulness", img: "/images/gallery/yoga.jpg", bg: "linear-gradient(135deg,#E8F5E9,#66BB6A)", category: "jumeirah outdoor", tag: "Jumeirah" },
-  { label: "Eid Celebration", img: "/images/gallery/eid.jpg", bg: "linear-gradient(135deg,#FCE4EC,#E91E63)", category: "events", tag: "Events" },
+  { label: "Outdoor Play Area",   img: "/images/gallery/outdoor-play.jpg",  bg: "linear-gradient(135deg,#EDF7F2,#C8E6C9)", category: "khalidiya outdoor", tag: "Khalidiya" },
+  { label: "Art & Craft Session", img: "/images/gallery/art-class.jpg",     bg: "linear-gradient(135deg,#FEF6E8,#FFE082)", category: "al-reem art",        tag: "Al Reem"   },
+  { label: "Nature Garden",       img: "/images/gallery/nature-garden.jpg", bg: "linear-gradient(135deg,#EDF7F2,#A5D6A7)", category: "mirdif outdoor",    tag: "Mirdif"    },
+  { label: "Sensory Play",        img: "/images/gallery/sensory-play.jpg",  bg: "linear-gradient(135deg,#FEF0EE,#F48FB1)", category: "khalidiya art",     tag: "Khalidiya" },
+  { label: "UAE National Day",    img: "/images/gallery/national-day.jpg",  bg: "linear-gradient(135deg,#E8F5E9,#00C853)", category: "events",             tag: "Events"    },
+  { label: "Music & Dance",       img: "/images/gallery/music-room.jpg",    bg: "linear-gradient(135deg,#F3F0FD,#B39DDB)", category: "al-reem",           tag: "Al Reem"   },
+  { label: "Story Time",          img: "/images/gallery/story-time.jpg",    bg: "linear-gradient(135deg,#FEF6E8,#FFE082)", category: "mirdif",            tag: "Mirdif"    },
+  { label: "Splash Zone",         img: "/images/gallery/splash-zone.jpg",   bg: "linear-gradient(135deg,#EDF7F2,#4FC3F7)", category: "khalidiya outdoor", tag: "Khalidiya" },
+  { label: "Graduation Day",      img: "/images/gallery/graduation.jpg",    bg: "linear-gradient(135deg,#FEF6E8,#FBC02D)", category: "events",             tag: "Events"    },
+  { label: "Science Discovery",   img: "/images/gallery/science.jpg",       bg: "linear-gradient(135deg,#FEF6E8,#03A9F4)", category: "al-reem art",       tag: "Al Reem"   },
+  { label: "Yoga & Mindfulness",  img: "/images/gallery/yoga.jpg",          bg: "linear-gradient(135deg,#EDF7F2,#66BB6A)", category: "mirdif outdoor",    tag: "Mirdif"    },
+  { label: "Eid Celebration",     img: "/images/gallery/eid.jpg",           bg: "linear-gradient(135deg,#FEF0EE,#E91E63)", category: "events",             tag: "Events"    },
 ];
 
-const filters = ["all", "marina", "downtown", "jumeirah", "outdoor", "art", "events"];
+const filters = ["all", "khalidiya", "al-reem", "mirdif", "outdoor", "art", "events"];
 
 export default function GalleryPage() {
   const [active, setActive] = useState("all");
