@@ -126,14 +126,17 @@ export default function HomePage() {
           </div>
           <div className={styles.videoShowcase}>
             <div className={styles.videoCard}>
-              <div className={styles.videoPlaceholder}>
+              {/* Vertical 9:16 video */}
+              <div className={styles.videoVerticalWrap}>
                 <video
-                  src="/IMG_5275.MP4"
                   controls
                   playsInline
                   preload="metadata"
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                />
+                  poster="/images/gallery/graduation.jpg"
+                >
+                  <source src="/testimonial.webm" type="video/webm" />
+                  <source src="/IMG_5275.MP4" type="video/mp4" />
+                </video>
               </div>
               <div className={styles.videoInfo}>
                 <h4>What Parents Say About Playhouse</h4>
