@@ -5,26 +5,26 @@
 
 :root {
   /* --- Brand Colours --- */
-  --primary: #4E8B6F;
-  --primary-dark: #3A7058;
-  --primary-light: #EDF7F2;
-  --secondary: #E8A84E;
-  --secondary-dark: #C98F38;
-  --secondary-light: #FEF6E8;
+  --primary: #2EC4B6;
+  --primary-dark: #1FA99C;
+  --primary-light: #E8F9F7;
+  --secondary: #FF6B35;
+  --secondary-dark: #E55A2B;
+  --secondary-light: #FFF3ED;
   --accent-coral: #E87B6A;
   --accent-sky: #6AAFE8;
   --accent-lavender: #9B8FD4;
-  --cream: #FDFAF5;
-  --warm-white: #FFFEF9;
+  --cream: #FAFAFA;
+  --warm-white: #FFFFFF;
 
   /* --- Neutrals --- */
-  --dark: #1E1E2E;
-  --dark-light: #3A3A4E;
-  --gray-900: #111120;
-  --gray-700: #525265;
-  --gray-500: #8A8AA0;
-  --gray-300: #DDDDE8;
-  --gray-100: #F5F5FA;
+  --dark: #1A1A1A;
+  --dark-light: #2D2D2D;
+  --gray-900: #212121;
+  --gray-700: #424242;
+  --gray-500: #757575;
+  --gray-300: #E0E0E0;
+  --gray-100: #F5F5F5;
   --white: #FFFFFF;
 
   /* --- Branch colours --- */
@@ -40,11 +40,11 @@
   --whatsapp-dark: #128C7E;
 
   /* --- Shadows --- */
-  --shadow-sm: 0 1px 4px rgba(30,30,46,0.06);
-  --shadow-md: 0 4px 16px rgba(30,30,46,0.08);
-  --shadow-lg: 0 8px 32px rgba(30,30,46,0.10);
-  --shadow-xl: 0 20px 60px rgba(30,30,46,0.13);
-  --shadow-color: 0 8px 32px rgba(78,139,111,0.18);
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0 2px 8px rgba(0,0,0,0.08);
+  --shadow-lg: 0 4px 16px rgba(0,0,0,0.10);
+  --shadow-xl: 0 8px 24px rgba(0,0,0,0.12);
+  --shadow-color: 0 4px 12px rgba(46,196,182,0.15);
 
   /* --- Radii --- */
   --radius-sm: 8px;
@@ -75,8 +75,8 @@ html {
 
 body {
   color: var(--gray-700);
-  line-height: 1.75;
-  background: var(--cream);
+  line-height: 1.6;
+  background: var(--white);
   overflow-x: hidden;
   font-family: var(--font-main);
   -webkit-font-smoothing: antialiased;
@@ -173,7 +173,7 @@ ul { list-style: none; }
   background: var(--primary);
   color: var(--white);
   border-color: var(--primary);
-  box-shadow: 0 4px 16px rgba(78,139,111,0.25);
+  box-shadow: var(--shadow-md);
 }
 .btn-primary:hover {
   background: var(--primary-dark);

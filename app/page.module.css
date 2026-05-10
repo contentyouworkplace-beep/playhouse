@@ -6,23 +6,19 @@
 /* ========== HERO ========== */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding-top: 115px;
+  padding-top: 100px;
+  background: linear-gradient(135deg, #FFFFFF 0%, #F5F5F5 100%);
 }
 
 .heroOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    165deg,
-    rgba(10, 20, 15, 0.72) 0%,
-    rgba(20, 40, 30, 0.55) 50%,
-    rgba(10, 20, 15, 0.72) 100%
-  );
+  background: transparent;
   z-index: 1;
 }
 
@@ -30,103 +26,101 @@
   position: relative;
   z-index: 2;
   text-align: center;
-  max-width: 860px;
-  padding: 60px 24px 100px;
-  color: var(--white);
-  animation: fadeInUp 1s ease-out both;
+  max-width: 800px;
+  padding: 40px 24px 80px;
+  color: var(--dark);
+  animation: fadeInUp 0.8s ease-out both;
 }
 
 .heroEyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  font-size: 0.75rem;
+  gap: 8px;
+  font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 2.5px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  background: rgba(232,168,78,0.2);
-  border: 1px solid rgba(232,168,78,0.5);
-  padding: 7px 20px;
+  background: var(--primary-light);
+  border: none;
+  padding: 6px 16px;
   border-radius: 50px;
-  margin-bottom: 24px;
-  color: #FFD98C;
+  margin-bottom: 20px;
+  color: var(--primary);
 }
 
 .heroTitle {
-  font-size: 4.4rem;
-  font-weight: 200;
-  line-height: 1.1;
-  margin-bottom: 22px;
-  font-family: var(--font-display);
-  letter-spacing: 0.5px;
+  font-size: 3.8rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 18px;
+  color: var(--dark);
+  letter-spacing: -0.5px;
 }
 
 .highlight {
-  font-weight: 400;
-  background: linear-gradient(135deg, #FFE08A 0%, #FFB347 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-weight: 700;
+  color: var(--primary);
 }
 
 .heroSubtitle {
-  font-size: 1.15rem;
-  opacity: 0.88;
-  max-width: 620px;
-  margin: 0 auto 36px;
-  line-height: 1.85;
-  font-weight: 300;
+  font-size: 1.1rem;
+  opacity: 0.85;
+  max-width: 600px;
+  margin: 0 auto 32px;
+  line-height: 1.7;
+  font-weight: 400;
+  color: var(--gray-700);
 }
 
 .heroBadges {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
   flex-wrap: wrap;
-  margin-bottom: 42px;
+  margin-bottom: 36px;
 }
 
 .badge {
-  background: rgba(255,255,255,0.12);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  padding: 9px 18px;
-  border-radius: 50px;
+  background: var(--gray-100);
+  border: 1px solid var(--gray-300);
+  padding: 8px 16px;
+  border-radius: 6px;
   font-weight: 600;
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  border: 1px solid rgba(255,255,255,0.2);
-  letter-spacing: 0.5px;
+  gap: 6px;
+  color: var(--gray-700);
+  letter-spacing: 0.3px;
   transition: var(--transition);
 }
 .badge:hover {
-  background: rgba(255,255,255,0.2);
+  background: var(--primary-light);
+  border-color: var(--primary);
+  color: var(--primary);
 }
 
 .heroButtons {
   display: flex;
   justify-content: center;
-  gap: 14px;
+  gap: 16px;
   flex-wrap: wrap;
 }
 
 .heroButtons .btn-outline {
-  color: var(--white);
-  border-color: rgba(255,255,255,0.5);
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(8px);
+  color: var(--primary);
+  border-color: var(--primary);
+  background: transparent;
 }
 .heroButtons .btn-outline:hover {
-  background: var(--white);
-  color: var(--primary);
-  border-color: var(--white);
+  background: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
 }
 
 .heroWave {
   position: absolute;
-  bottom: -2px;
+  bottom: -1px;
   left: 0;
   right: 0;
   z-index: 3;
@@ -168,7 +162,7 @@
 /* ========== STATS BAR ========== */
 .statsBar {
   padding: 0 0 60px;
-  background: var(--cream);
+  background: var(--white);
 }
 
 .statsGrid {
@@ -233,7 +227,7 @@
 /* ========== CURRICULUM SECTION ========== */
 .curriculumSection {
   padding: 100px 0;
-  background: var(--cream);
+  background: var(--white);
 }
 
 .curriculumGrid {
@@ -257,19 +251,13 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
-  border-radius: 4px 4px 0 0;
+  height: 3px;
+  background: var(--primary);
 }
 .curriculumCard:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
 }
-.curriculumCard:nth-child(2)::before { background: linear-gradient(90deg, var(--secondary), var(--accent-coral)); }
-.curriculumCard:nth-child(3)::before { background: linear-gradient(90deg, var(--accent-coral), var(--accent-lavender)); }
-.curriculumCard:nth-child(4)::before { background: linear-gradient(90deg, var(--accent-lavender), var(--accent-sky)); }
-.curriculumCard:nth-child(5)::before { background: linear-gradient(90deg, var(--accent-sky), var(--primary)); }
-.curriculumCard:nth-child(6)::before { background: linear-gradient(90deg, var(--primary), var(--secondary)); }
 
 .curriculumIconWrap {
   width: 58px;
@@ -303,13 +291,13 @@
 /* ========== QUIZ SECTION ========== */
 .quizSection {
   padding: 100px 0;
-  background: linear-gradient(160deg, #EDF7F2 0%, #F5F0FF 100%);
+  background: var(--white);
 }
 
 /* ========== ABOUT / PRINCIPAL ========== */
 .principal {
   padding: 110px 0;
-  background: var(--cream);
+  background: var(--white);
 }
 
 .principalGrid {
@@ -327,7 +315,7 @@
   position: absolute;
   inset: -16px;
   border-radius: calc(var(--radius-lg) + 16px);
-  background: linear-gradient(135deg, var(--primary-light), var(--secondary-light));
+  background: var(--gray-100);
   z-index: 0;
 }
 .principalImageWrap .videoPlaceholder {
@@ -430,22 +418,9 @@
 /* ========== TESTIMONIALS ========== */
 .testimonials {
   padding: 110px 0;
-  background: var(--secondary-light);
+  background: var(--white);
   position: relative;
   overflow: hidden;
-}
-.testimonials::before {
-  content: '"';
-  position: absolute;
-  top: -40px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 28rem;
-  font-family: var(--font-display);
-  color: var(--secondary);
-  opacity: 0.06;
-  line-height: 1;
-  pointer-events: none;
 }
 
 .videoShowcase {
@@ -512,8 +487,8 @@
   position: relative;
 }
 .testimonialCard:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
 }
 .testimonialQuoteIcon {
   font-size: 2.8rem;
@@ -572,7 +547,7 @@
 /* ========== TOURS SECTION ========== */
 .toursSection {
   padding: 110px 0;
-  background: var(--cream);
+  background: var(--white);
 }
 
 .toursGrid {
@@ -589,8 +564,8 @@
   transition: var(--transition);
 }
 .tourCard:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
 }
 .tourPreview {
   min-height: 210px;
@@ -616,8 +591,7 @@
   position: absolute;
   top: 14px;
   left: 14px;
-  background: rgba(0,0,0,0.55);
-  backdrop-filter: blur(6px);
+  background: rgba(0,0,0,0.65);
   color: var(--white);
   padding: 6px 14px;
   border-radius: 50px;
@@ -680,7 +654,7 @@
 /* ========== PROGRAMS ========== */
 .programs {
   padding: 110px 0;
-  background: linear-gradient(180deg, #F0FAF5 0%, #FDFAF5 100%);
+  background: var(--white);
 }
 
 .programsGrid {
@@ -696,44 +670,18 @@
   position: relative;
   overflow: hidden;
   text-align: center;
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-300);
 }
-.programCard::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  opacity: 0.08;
-  transition: var(--transition);
+.programCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
 }
-.programCard:hover::before { opacity: 0.15; }
-.programCard:hover { transform: translateY(-8px); box-shadow: var(--shadow-xl); }
 
-/* Baby Nest — mint */
-.programCard:nth-child(1) {
-  background: #EDF7F2;
-  border: 2px solid rgba(78,139,111,0.15);
-}
-.programCard:nth-child(1)::before { background: var(--primary); }
 .programCard:nth-child(1) .programIconWrap { background: var(--primary); }
-
-/* Tiny Explorers — gold */
-.programCard:nth-child(2) {
-  background: #FEF6E8;
-  border: 2px solid rgba(232,168,78,0.15);
-}
 .programCard:nth-child(2) .programIconWrap { background: var(--secondary); }
-
-/* Creative Stars — coral */
-.programCard:nth-child(3) {
-  background: #FEF0EE;
-  border: 2px solid rgba(232,123,106,0.15);
-}
 .programCard:nth-child(3) .programIconWrap { background: var(--accent-coral); }
-
-/* School Readiness — lavender */
-.programCard:nth-child(4) {
-  background: #F3F0FD;
-  border: 2px solid rgba(155,143,212,0.15);
-}
 .programCard:nth-child(4) .programIconWrap { background: var(--accent-lavender); }
 
 .programIconWrap {
@@ -782,7 +730,7 @@
 /* ========== GALLERY PREVIEW ========== */
 .galleryPreview {
   padding: 110px 0;
-  background: var(--cream);
+  background: var(--white);
 }
 
 .galleryGrid {
@@ -851,29 +799,9 @@
 /* ========== CONTACT ========== */
 .contact {
   padding: 110px 0;
-  background: linear-gradient(155deg, #1A1A2E 0%, #2D2420 60%, #1A1A2E 100%);
+  background: #1A1A1A;
   position: relative;
   overflow: hidden;
-}
-.contact::before {
-  content: '';
-  position: absolute;
-  top: -100px;
-  right: -100px;
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(78,139,111,0.12) 0%, transparent 70%);
-}
-.contact::after {
-  content: '';
-  position: absolute;
-  bottom: -100px;
-  left: -100px;
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(232,168,78,0.1) 0%, transparent 70%);
 }
 
 .branchesGrid {
@@ -892,8 +820,8 @@
   transition: var(--transition);
 }
 .branchCard:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 24px 80px rgba(0,0,0,0.25);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
 }
 
 .branchHeader {
