@@ -87,7 +87,7 @@ export default function Quiz() {
   };
 
   const branch =
-    branchData[answers[1]] || branchData.marina;
+    branchData[answers[1]] || branchData.khalidiya;
 
   const progressPercent = showResult
     ? 100
