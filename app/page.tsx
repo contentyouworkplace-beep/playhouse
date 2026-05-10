@@ -128,7 +128,7 @@ export default function HomePage() {
             <div className={styles.videoCard}>
               <div className={styles.videoPlaceholder}>
                 <video
-                  src="/IMG_5275.MP4"
+                  src="/testimonial.webm"
                   controls
                   playsInline
                   preload="metadata"
