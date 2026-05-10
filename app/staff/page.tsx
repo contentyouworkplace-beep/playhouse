@@ -1,4 +1,15 @@
+import type { Metadata } from "next";
 import styles from "./page.module.css";
+import { buildMetadata } from "@/lib/seo";
+
+export const revalidate = 86400;
+
+export const metadata: Metadata = buildMetadata({
+  title: "Our Team | Playhouse Nursery UAE",
+  description: "Meet the dedicated educators and staff behind Playhouse Nursery. Experienced early years professionals across our UAE branches.",
+  path: "/staff",
+  keywords: ["Playhouse Nursery team", "nursery teachers UAE", "early years educators"],
+});
 
 const leadership = [
   {
@@ -21,18 +32,18 @@ const leadership = [
 
 const branches = [
   {
-    label: "Marina Branch",
-    color: "marina" as const,
+    label: "Khalidiya Branch",
+    color: "khalidiya" as const,
     staff: [
-      { name: "Ms. Emily Richards", role: "Branch Head Teacher", emoji: "👩‍🏫", bg: "linear-gradient(135deg,#C8E6C9,#A5D6A7)", bio: "Leading the Marina team with 10 years of experience in British early years education.", quals: ["PGCE Early Years"] },
+      { name: "Ms. Emily Richards", role: "Branch Head Teacher", emoji: "👩‍🏫", bg: "linear-gradient(135deg,#C8E6C9,#A5D6A7)", bio: "Leading the Khalidiya team with 10 years of experience in British early years education.", quals: ["PGCE Early Years"] },
       { name: "Ms. Priya Sharma", role: "Creative Arts Teacher", emoji: "👩‍🎨", bg: "linear-gradient(135deg,#F8BBD0,#F48FB1)", bio: "Inspiring creativity through art, music, and sensory play. Priya brings colour to every classroom.", quals: ["BA Fine Arts"] },
       { name: "Nurse Fatima Al Mazrouei", role: "School Nurse", emoji: "👩‍⚕️", bg: "linear-gradient(135deg,#D1C4E9,#B39DDB)", bio: "Ensuring the health and safety of every child with expert medical care and warmth.", quals: ["DHA Licensed"] },
       { name: "Ms. Huda Ibrahim", role: "Arabic & Islamic Studies", emoji: "🧕", bg: "linear-gradient(135deg,#FFECB3,#FFE082)", bio: "Teaching Arabic language and Islamic values with love, patience, and engaging activities.", quals: ["BA Arabic Education"] },
     ],
   },
   {
-    label: "Downtown Branch",
-    color: "downtown" as const,
+    label: "Al Reem Branch",
+    color: "alreem" as const,
     staff: [
       { name: "Ms. Sophie Laurent", role: "Branch Head Teacher", emoji: "👩‍🏫", bg: "linear-gradient(135deg,#B3E5FC,#81D4FA)", bio: "Bilingual educator fluent in English and French with a passion for multilingual learning.", quals: ["M.Ed Bilingual Ed"] },
       { name: "Mr. James Okafor", role: "Music & Movement Teacher", emoji: "👨‍🎵", bg: "linear-gradient(135deg,#FFE0B2,#FFCC80)", bio: "Bringing rhythm and joy to early learning through music, dance, and performance.", quals: ["BMus Education"] },
@@ -41,8 +52,8 @@ const branches = [
     ],
   },
   {
-    label: "Jumeirah Branch",
-    color: "jumeirah" as const,
+    label: "Mirdif Branch",
+    color: "mirdif" as const,
     staff: [
       { name: "Ms. Charlotte Bennett", role: "Branch Head Teacher", emoji: "👩‍🏫", bg: "linear-gradient(135deg,#FFECB3,#FFE082)", bio: "Nature-based learning advocate with expertise in outdoor classroom environments.", quals: ["Forest School L3"] },
       { name: "Mr. Ravi Patel", role: "Physical Education & Yoga", emoji: "👨‍🏫", bg: "linear-gradient(135deg,#D1C4E9,#B39DDB)", bio: "Helping children develop coordination, strength, and mindfulness through fun movement activities.", quals: ["Kids Yoga Certified"] },
@@ -51,10 +62,6 @@ const branches = [
     ],
   },
 ];
-
-export const metadata = {
-  title: "Our Team | Playhouse Nursery Dubai",
-};
 
 export default function StaffPage() {
   return (

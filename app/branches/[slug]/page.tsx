@@ -2,6 +2,9 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
 import styles from "./page.module.css";
+import { buildMetadata, breadcrumbSchema, serviceSchema } from "@/lib/seo";
+
+export const revalidate = 3600;
 
 const branches: Record<string, {
   name: string;
@@ -19,22 +22,22 @@ const branches: Record<string, {
   highlights: { icon: string; label: string }[];
   galleryImages: string[];
 }> = {
-  marina: {
-    name: "Playhouse Marina",
-    tagline: "Modern facilities with stunning views in the heart of Dubai Marina",
-    icon: "🏙️",
-    color: "#0EA5E9",
-    gradient: "linear-gradient(135deg, #0EA5E9, #0284C7)",
-    heroImg: "/images/branches/marina.jpg",
-    address: "Al Sahab Tower, Dubai Marina, Dubai, UAE",
-    phone: "+971 4 XXX XXXX",
-    email: "marina@playhousenursery.ae",
+  khalidiya: {
+    name: "Playhouse Khalidiya",
+    tagline: "Our main campus in the heart of Al Khalidiya, Abu Dhabi",
+    icon: "🏛️",
+    color: "#4E8B6F",
+    gradient: "linear-gradient(135deg, #4E8B6F, #3A7058)",
+    heroImg: "/images/branches/khalidiya.jpg",
+    address: "Al Khalidiya Street, Villa 11/8, Behind Sheraton Khalidiya Hotel, Abu Dhabi",
+    phone: "+971 54 263 2235",
+    email: "playhousekhalidiya@gmail.com",
     hours: "Sun – Thu, 7:00 AM – 6:00 PM",
-    whatsapp: "https://wa.me/971XXXXXXXXX?text=Hi%20Playhouse%20Marina!%20I'd%20like%20to%20know%20more%20about%20your%20nursery.",
-    description: "Our flagship Marina branch features modern, purpose-built facilities with stunning views. Children enjoy a blend of indoor and outdoor learning experiences designed to spark curiosity and creativity. Located in the iconic Al Sahab Tower, we offer easy access for families in JBR, Marina Walk, and surrounding communities.",
+    whatsapp: "https://wa.me/971542632235?text=Hi%20Playhouse%20Khalidiya!%20I'd%20like%20to%20know%20more%20about%20your%20nursery.",
+    description: "Our main Khalidiya branch features spacious classrooms and dedicated outdoor play areas in the heart of Abu Dhabi. Children enjoy a blend of indoor and outdoor learning experiences designed to spark curiosity and creativity.",
     highlights: [
-      { icon: "fa-tree", label: "Rooftop Garden" },
-      { icon: "fa-swimming-pool", label: "Splash Zone" },
+      { icon: "fa-building", label: "Main Campus" },
+      { icon: "fa-tree", label: "Outdoor Play Area" },
       { icon: "fa-utensils", label: "Nutritious Kitchen" },
       { icon: "fa-chalkboard-teacher", label: "Smart Classrooms" },
       { icon: "fa-video", label: "CCTV Access" },
@@ -47,19 +50,19 @@ const branches: Record<string, {
       "/images/gallery/art-class.jpg",
     ],
   },
-  downtown: {
-    name: "Playhouse Downtown",
-    tagline: "Premium early education in the bustling heart of Business Bay",
-    icon: "🏛️",
-    color: "#8B5CF6",
-    gradient: "linear-gradient(135deg, #8B5CF6, #7C3AED)",
-    heroImg: "/images/branches/downtown.jpg",
-    address: "Executive Tower, Business Bay, Dubai, UAE",
-    phone: "+971 4 XXX XXXX",
-    email: "downtown@playhousenursery.ae",
+  "al-reem": {
+    name: "Playhouse Al Reem",
+    tagline: "Premium early education on vibrant Al Reem Island, Abu Dhabi",
+    icon: "🏙️",
+    color: "#E8A84E",
+    gradient: "linear-gradient(135deg, #E8A84E, #C98F38)",
+    heroImg: "/images/branches/al-reem.jpg",
+    address: "Al Reem Island, Marina Square, Tala Tower, Unit G-203, Abu Dhabi",
+    phone: "+971 50 562 4547",
+    email: "playhousealreem@gmail.com",
     hours: "Sun – Thu, 7:00 AM – 6:00 PM",
-    whatsapp: "https://wa.me/971XXXXXXXXX?text=Hi%20Playhouse%20Downtown!%20I'd%20like%20to%20know%20more%20about%20your%20nursery.",
-    description: "Located in the bustling heart of Business Bay, our Downtown branch is designed for busy families who want premium early education at their doorstep. Features dedicated creative and STEM zones, plus a bilingual Arabic-English program that prepares children for a multicultural world.",
+    whatsapp: "https://wa.me/971505624547?text=Hi%20Playhouse%20Al%20Reem!%20I'd%20like%20to%20know%20more%20about%20your%20nursery.",
+    description: "Located on the vibrant Al Reem Island in Marina Square, Tala Tower, our Al Reem branch offers a dedicated art studio, sensory room, and bilingual Arabic-English program. Ideal for island families who want premium early education at their doorstep.",
     highlights: [
       { icon: "fa-palette", label: "Art Studio" },
       { icon: "fa-music", label: "Music Room" },
@@ -75,23 +78,23 @@ const branches: Record<string, {
       "/images/gallery/graduation.jpg",
     ],
   },
-  jumeirah: {
-    name: "Playhouse Jumeirah",
-    tagline: "A charming villa setting focused on nature-based learning",
+  mirdif: {
+    name: "Playhouse Mirdif",
+    tagline: "Modern nursery facilities in Mirdif Hills Avenue Mall, Dubai",
     icon: "🌴",
-    color: "#10B981",
-    gradient: "linear-gradient(135deg, #10B981, #059669)",
-    heroImg: "/images/branches/jumeirah.jpg",
-    address: "Beach Road Villa, Jumeirah 1, Dubai, UAE",
-    phone: "+971 4 XXX XXXX",
-    email: "jumeirah@playhousenursery.ae",
+    color: "#E87B6A",
+    gradient: "linear-gradient(135deg, #E87B6A, #C5604F)",
+    heroImg: "/images/branches/mirdif.jpg",
+    address: "Mirdif Hills Avenue Mall, Dubai, UAE",
+    phone: "+971 52 982 1105",
+    email: "playhousemirdif@gmail.com",
     hours: "Sun – Thu, 7:00 AM – 6:00 PM",
-    whatsapp: "https://wa.me/971XXXXXXXXX?text=Hi%20Playhouse%20Jumeirah!%20I'd%20like%20to%20know%20more%20about%20your%20nursery.",
-    description: "Our charming Jumeirah villa offers a home-like atmosphere with expansive outdoor spaces. Children thrive in our nature-focused environment with a dedicated garden, library corner, and open-air classrooms. Set along Beach Road, it's the perfect nurturing environment for families in Jumeirah and Al Wasl.",
+    whatsapp: "https://wa.me/971529821105?text=Hi%20Playhouse%20Mirdif!%20I'd%20like%20to%20know%20more%20about%20your%20nursery.",
+    description: "Set in the Mirdif Hills Avenue Mall in Dubai, our Mirdif branch boasts modern facilities, nature-inspired play areas, and convenient mall access. A perfect nurturing environment focused on nature-based learning and creativity.",
     highlights: [
       { icon: "fa-seedling", label: "Nature Garden" },
       { icon: "fa-book", label: "Library Corner" },
-      { icon: "fa-home", label: "Villa Setting" },
+      { icon: "fa-store", label: "Mall Location" },
       { icon: "fa-sun", label: "Outdoor Classrooms" },
       { icon: "fa-video", label: "CCTV Access" },
       { icon: "fa-utensils", label: "Organic Meals" },
@@ -113,17 +116,19 @@ const programs = [
 ];
 
 export async function generateStaticParams() {
-  return [{ slug: "marina" }, { slug: "downtown" }, { slug: "jumeirah" }];
+  return [{ slug: "khalidiya" }, { slug: "al-reem" }, { slug: "mirdif" }];
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const branch = branches[slug];
   if (!branch) return { title: "Branch Not Found" };
-  return {
-    title: `${branch.name} | Playhouse Nursery Dubai`,
-    description: branch.tagline,
-  };
+  return buildMetadata({
+    title: `${branch.name} | Playhouse Nursery UAE`,
+    description: `${branch.tagline} — Playhouse Nursery offers KHDA-approved British EYFS early education for ages 45 days to 6 years.`,
+    path: `/branches/${slug}`,
+    keywords: ["nursery UAE", "EYFS nursery", branch.name, slug, "Playhouse Nursery", "British curriculum"],
+  });
 }
 
 export default async function BranchPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -131,8 +136,23 @@ export default async function BranchPage({ params }: { params: Promise<{ slug: s
   const branch = branches[slug];
   if (!branch) notFound();
 
+  const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://playhousenursery.ae";
+  const breadcrumb = breadcrumbSchema([
+    { name: "Home", item: "/" },
+    { name: "Branches", item: "/branches" },
+    { name: branch.name, item: `/branches/${slug}` },
+  ]);
+  const service = serviceSchema({
+    name: branch.name,
+    description: branch.tagline,
+    url: `/branches/${slug}`,
+    areaServed: ["Dubai", "UAE"],
+  });
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(service) }} />
       {/* ========== HERO ========== */}
       <section
         className={styles.hero}

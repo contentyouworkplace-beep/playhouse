@@ -4,9 +4,9 @@ import { useState } from "react";
 import styles from "./WhatsAppFloat.module.css";
 
 const branches = [
-  { name: "Marina Branch", phone: "+971 XX XXX XXXX", link: "https://wa.me/971XXXXXXXXX?text=Hi%20Playhouse%20Marina!", color: "marina" },
-  { name: "Downtown Branch", phone: "+971 XX XXX XXXX", link: "https://wa.me/971XXXXXXXXX?text=Hi%20Playhouse%20Downtown!", color: "downtown" },
-  { name: "Jumeirah Branch", phone: "+971 XX XXX XXXX", link: "https://wa.me/971XXXXXXXXX?text=Hi%20Playhouse%20Jumeirah!", color: "jumeirah" },
+  { name: "Khalidiya Branch", phone: "+971 54 263 2235", link: "https://wa.me/971542632235?text=Hi%20Playhouse%20Khalidiya!", color: "khalidiya" },
+  { name: "Al Reem Branch", phone: "+971 50 562 4547", link: "https://wa.me/971505624547?text=Hi%20Playhouse%20Al%20Reem!", color: "alreem" },
+  { name: "Mirdif Branch", phone: "+971 52 982 1105", link: "https://wa.me/971529821105?text=Hi%20Playhouse%20Mirdif!", color: "mirdif" },
 ];
 
 export default function WhatsAppFloat() {

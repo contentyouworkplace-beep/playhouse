@@ -10,17 +10,17 @@ const questions = [
     options: [
       { emoji: "🍼", text: "45 days – 1 year", value: "infant" },
       { emoji: "🧸", text: "1 – 2 years", value: "toddler" },
-      { emoji: "🎨", text: "2 – 4 years", value: "preschool" },
-      { emoji: "📚", text: "4 – 6 years", value: "pre-kg" },
+      { emoji: "🎨", text: "2 – 3 years", value: "preschool" },
+      { emoji: "📚", text: "3 – 4 years", value: "pre-kg" },
     ],
   },
   {
     icon: "📍",
-    title: "Which area of Dubai is most convenient for you?",
+    title: "Which area is most convenient for you?",
     options: [
-      { emoji: "🏙️", text: "Dubai Marina / JBR", value: "marina" },
-      { emoji: "🏛️", text: "Downtown / Business Bay", value: "downtown" },
-      { emoji: "🌴", text: "Jumeirah / Al Wasl", value: "jumeirah" },
+      { emoji: "🏛️", text: "Al Khalidiya, Abu Dhabi", value: "khalidiya" },
+      { emoji: "🏙️", text: "Al Reem Island, Abu Dhabi", value: "alreem" },
+      { emoji: "🌴", text: "Mirdif, Dubai", value: "mirdif" },
       { emoji: "🗺️", text: "No preference", value: "any" },
     ],
   },
@@ -47,20 +47,20 @@ const questions = [
 ];
 
 const branchData: Record<string, { name: string; desc: string; link: string }> = {
-  marina: {
-    name: "Playhouse Marina",
-    desc: "Our Marina branch features a stunning rooftop garden, splash zone, and state-of-the-art facilities. Perfect for families in the Dubai Marina & JBR area, offering flexible scheduling and a balanced EYFS curriculum with play-based learning.",
-    link: "https://wa.me/971XXXXXXXXX?text=Hi!%20I%20took%20the%20quiz%20and%20I%E2%80%99d%20love%20to%20learn%20more%20about%20Playhouse%20Marina.",
+  khalidiya: {
+    name: "Playhouse Khalidiya",
+    desc: "Our main branch in Al Khalidiya, Abu Dhabi features spacious classrooms and outdoor play areas. Perfect for families in Abu Dhabi, offering a balanced EYFS curriculum with play-based learning.",
+    link: "https://wa.me/971542632235?text=Hi!%20I%20took%20the%20quiz%20and%20I%E2%80%99d%20love%20to%20learn%20more%20about%20Playhouse%20Khalidiya.",
   },
-  downtown: {
-    name: "Playhouse Downtown",
-    desc: "Located in the heart of Business Bay, our Downtown branch offers a dedicated art studio, music room, and bilingual Arabic-English program. Ideal for working parents who need convenient access and extended care options.",
-    link: "https://wa.me/971XXXXXXXXX?text=Hi!%20I%20took%20the%20quiz%20and%20I%E2%80%99d%20love%20to%20learn%20more%20about%20Playhouse%20Downtown.",
+  alreem: {
+    name: "Playhouse Al Reem",
+    desc: "Located on Al Reem Island in Marina Square, Tala Tower, our Al Reem branch offers a dedicated art studio and bilingual Arabic-English program. Ideal for families on the island.",
+    link: "https://wa.me/971505624547?text=Hi!%20I%20took%20the%20quiz%20and%20I%E2%80%99d%20love%20to%20learn%20more%20about%20Playhouse%20Al%20Reem.",
   },
-  jumeirah: {
-    name: "Playhouse Jumeirah",
-    desc: "Set in a beautiful Beach Road villa, our Jumeirah branch boasts a lush nature garden, cozy library corner, and spacious outdoor play areas. A perfect nurturing environment focused on nature-based learning and creativity.",
-    link: "https://wa.me/971XXXXXXXXX?text=Hi!%20I%20took%20the%20quiz%20and%20I%E2%80%99d%20love%20to%20learn%20more%20about%20Playhouse%20Jumeirah.",
+  mirdif: {
+    name: "Playhouse Mirdif",
+    desc: "Set in the Mirdif Hills Avenue Mall in Dubai, our Mirdif branch boasts modern facilities, nature-inspired play areas, and convenient mall access for parents.",
+    link: "https://wa.me/971529821105?text=Hi!%20I%20took%20the%20quiz%20and%20I%E2%80%99d%20love%20to%20learn%20more%20about%20Playhouse%20Mirdif.",
   },
 };
 

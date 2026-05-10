@@ -15,27 +15,46 @@
   color: var(--white);
   font-size: 1.3rem;
   margin-bottom: 12px;
+  font-family: var(--font-display);
 }
-.accent { color: var(--primary); }
+.accent { color: var(--secondary); }
 .footerBrand p {
   font-size: 0.9rem;
-  line-height: 1.7;
+  line-height: 1.8;
   margin-bottom: 16px;
+}
+.brochureLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--secondary);
+  color: var(--dark) !important;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 7px 16px;
+  border-radius: 50px;
+  margin-bottom: 16px;
+  letter-spacing: 0.3px;
+  transition: all 0.2s;
+}
+.brochureLink:hover {
+  background: var(--secondary-dark) !important;
+  transform: translateY(-1px);
 }
 .social {
   display: flex;
   gap: 12px;
 }
 .social a {
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   background: rgba(255,255,255,0.08);
   display: flex;
   align-items: center;
   justify-content: center;
   color: rgba(255,255,255,0.7);
-  font-size: 1rem;
+  font-size: 0.9rem;
   transition: var(--transition);
 }
 .social a:hover {
@@ -46,19 +65,22 @@
 .footerLinks h4 {
   font-weight: 800;
   color: var(--white);
-  font-size: 1rem;
+  font-size: 0.95rem;
   margin-bottom: 16px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-family: var(--font-main);
 }
 .footerLinks li {
   margin-bottom: 8px;
 }
 .footerLinks a {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: rgba(255,255,255,0.6);
   transition: var(--transition);
 }
 .footerLinks a:hover {
-  color: var(--primary);
+  color: var(--secondary);
   padding-left: 4px;
 }
 .footerBottom {
@@ -71,7 +93,7 @@
   color: rgba(255,255,255,0.5);
 }
 .footerBottom a:hover {
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 @media (max-width: 1024px) {

@@ -48,9 +48,9 @@
   color: var(--white);
   margin-bottom: 14px;
 }
-.branchLabel.marina { background: var(--marina-color); }
-.branchLabel.downtown { background: var(--downtown-color); }
-.branchLabel.jumeirah { background: var(--jumeirah-color); }
+.branchLabel.khalidiya { background: var(--marina-color); }
+.branchLabel.alreem { background: var(--downtown-color); }
+.branchLabel.mirdif { background: var(--jumeirah-color); }
 
 /* ========== STAFF GRID ========== */
 .leadershipGrid {
