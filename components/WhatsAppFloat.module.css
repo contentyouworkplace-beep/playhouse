@@ -61,11 +61,11 @@
   align-items: center;
   gap: 12px;
   padding: 14px 20px;
-  border-bottom: 1px solid var(--gray-100);
+  border-bottom: 1px solid var(--border);
   transition: var(--transition);
 }
 .branch:hover {
-  background: var(--gray-100);
+  background: var(--light-gray);
 }
 .dot {
   width: 10px;
@@ -73,9 +73,9 @@
   border-radius: 50%;
   flex-shrink: 0;
 }
-.khalidiya { background: var(--marina-color); }
-.alreem { background: var(--downtown-color); }
-.mirdif { background: var(--jumeirah-color); }
+.khalidiya { background: var(--khalidiya); }
+.alreem { background: var(--alreem); }
+.mirdif { background: var(--mirdif); }
 .branch div { flex: 1; }
 .branch strong {
   display: block;
@@ -84,7 +84,7 @@
 }
 .branch small {
   font-size: 0.78rem;
-  color: var(--gray-500);
+  color: var(--text-light);
 }
 .branch i {
   color: var(--whatsapp);

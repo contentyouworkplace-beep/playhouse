@@ -1,6 +1,5 @@
 /* ===================================================
-   HEADER — Two-row (Kids Spot structure)
-   Colours from Miss Daisy palette
+   HEADER — White, clean, bold — Friendly ECC style
    =================================================== */
 
 .header {
@@ -12,7 +11,7 @@
   transition: box-shadow 0.3s ease;
 }
 .scrolled {
-  box-shadow: 0 4px 20px rgba(45,41,38,0.12);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
 /* ── TOP BAR ── */
@@ -23,11 +22,11 @@
 .topbarInner {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 42px;
+  height: 44px;
   gap: 12px;
 }
 
@@ -39,10 +38,10 @@
 }
 .topLink {
   color: rgba(255,255,255,0.88);
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   font-weight: 600;
-  padding: 0 14px;
-  height: 42px;
+  padding: 0 16px;
+  height: 44px;
   display: flex;
   align-items: center;
   border-right: 1px solid rgba(255,255,255,0.18);
@@ -52,7 +51,6 @@
 .topLink:first-child { border-left: 1px solid rgba(255,255,255,0.18); }
 .topLink:hover { color: var(--secondary); }
 
-/* Top branch dropdowns */
 .topDropWrap {
   position: relative;
   border-right: 1px solid rgba(255,255,255,0.18);
@@ -64,10 +62,10 @@
   background: none;
   border: none;
   color: rgba(255,255,255,0.88);
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   font-weight: 600;
-  padding: 0 14px;
-  height: 42px;
+  padding: 0 16px;
+  height: 44px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -84,9 +82,9 @@
   top: 100%;
   left: 0;
   background: var(--white);
-  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
   box-shadow: var(--shadow-lg);
-  min-width: 220px;
+  min-width: 230px;
   z-index: 999;
   overflow: hidden;
   animation: dropIn 0.18s ease-out;
@@ -95,18 +93,17 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 11px 18px;
-  color: var(--gray-700);
-  font-size: 0.85rem;
+  padding: 12px 20px;
+  color: var(--text);
+  font-size: 0.9rem;
   font-weight: 500;
-  border-bottom: 1px solid var(--gray-100);
+  border-bottom: 1px solid var(--border);
   transition: background 0.15s, color 0.15s;
 }
 .topDropMenu a:last-child { border-bottom: none; }
 .topDropMenu a:hover { background: var(--primary-light); color: var(--primary); }
 .topDropMenu a i { color: var(--primary); width: 16px; }
 
-/* Right side of top bar */
 .topRight {
   display: flex;
   align-items: center;
@@ -114,9 +111,9 @@
 }
 .socialIcon {
   color: rgba(255,255,255,0.8);
-  font-size: 0.85rem;
-  width: 28px;
-  height: 28px;
+  font-size: 0.9rem;
+  width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -131,11 +128,11 @@
 }
 .brochureBtn {
   background: var(--secondary);
-  color: var(--dark) !important;
-  font-size: 0.78rem;
+  color: #111 !important;
+  font-size: 0.82rem;
   font-weight: 700;
-  padding: 6px 14px;
-  border-radius: 50px;
+  padding: 7px 16px;
+  border-radius: 2px;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -144,24 +141,23 @@
   white-space: nowrap;
 }
 .brochureBtn:hover {
-  background: var(--secondary-dark);
+  background: #d4911f;
   transform: translateY(-1px);
-  box-shadow: 0 3px 10px rgba(201,168,76,0.4);
 }
 
 /* ── MAIN NAV ── */
 .mainNav {
   background: var(--white);
-  border-bottom: 1px solid var(--gray-300);
+  border-bottom: 1px solid var(--border);
 }
 .mainInner {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 72px;
+  height: 76px;
   gap: 16px;
 }
 
@@ -173,14 +169,13 @@
   text-decoration: none;
 }
 .logoText {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: var(--primary);
-  letter-spacing: 0.3px;
+  letter-spacing: 0.2px;
   white-space: nowrap;
 }
 
-/* Nav links list */
 .navLinks {
   display: flex;
   align-items: center;
@@ -191,16 +186,17 @@
 }
 .navLinks > li > a,
 .dropTrigger {
-  color: var(--gray-700);
+  color: var(--text);
   font-size: 0.88rem;
   font-weight: 600;
-  padding: 8px 12px;
+  padding: 9px 12px;
   border-radius: var(--radius-sm);
   transition: color 0.2s, background 0.2s;
   letter-spacing: 0.2px;
   display: flex;
   align-items: center;
   gap: 5px;
+  white-space: nowrap;
 }
 .navLinks > li > a:hover,
 .navLinks > li > a.active,
@@ -209,7 +205,6 @@
   background: var(--primary-light);
 }
 
-/* Main nav dropdowns */
 .dropItem {
   position: relative;
 }
@@ -226,41 +221,42 @@
   top: calc(100% + 8px);
   left: 0;
   background: var(--white);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   box-shadow: var(--shadow-lg);
-  min-width: 210px;
+  min-width: 220px;
   z-index: 998;
   overflow: hidden;
   animation: dropIn 0.18s ease-out;
   border-top: 3px solid var(--primary);
 }
 .dropMenu a {
-  display: block;
-  padding: 11px 18px;
-  color: var(--gray-700);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 20px;
+  color: var(--text);
   font-size: 0.88rem;
   font-weight: 500;
-  border-bottom: 1px solid var(--gray-100);
+  border-bottom: 1px solid var(--border);
   transition: background 0.15s, color 0.15s;
 }
 .dropMenu a:last-child { border-bottom: none; }
-.dropMenu a:hover { background: var(--primary-light); color: var(--primary); }
+.dropMenu a:hover { background: var(--light-gray); color: var(--dark); }
+.dropMenu a i { color: var(--text-light); width: 14px; font-size: 0.8rem; flex-shrink: 0; }
 
-/* Book a Visit CTA */
 .ctaBtn {
   background: var(--primary) !important;
   color: var(--white) !important;
-  border-radius: 50px !important;
-  padding: 10px 22px !important;
+  border-radius: 2px !important;
+  padding: 11px 24px !important;
   font-weight: 700 !important;
-  font-size: 0.88rem !important;
-  margin-left: 6px;
+  font-size: 0.95rem !important;
+  margin-left: 8px;
   letter-spacing: 0.3px;
 }
 .ctaBtn:hover {
   background: var(--primary-dark) !important;
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(74,124,95,0.35) !important;
 }
 
 /* ── HAMBURGER ── */
@@ -282,7 +278,6 @@
   display: block;
 }
 
-/* ── ANIMATION ── */
 @keyframes dropIn {
   from { opacity: 0; transform: translateY(-6px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -295,13 +290,13 @@
   .topbar { display: flex; justify-content: flex-end; }
   .topbarInner { justify-content: flex-end; }
   .topLinks { display: none; }
-  .logoText { font-size: 1rem; }
+  .logoText { font-size: 1.1rem; }
 
   .hamburger { display: flex; }
   .navLinks {
     display: none;
     position: absolute;
-    top: 115px;
+    top: 120px;
     left: 0;
     right: 0;
     background: var(--white);
@@ -319,12 +314,12 @@
   .mobileOpen { display: flex !important; }
   .navLinks > li > a,
   .dropTrigger {
-    padding: 14px 24px;
+    padding: 16px 28px;
     border-radius: 0;
-    font-size: 0.95rem;
+    font-size: 1rem;
     width: 100%;
     text-align: left;
-    min-height: 48px;
+    min-height: 52px;
   }
   .dropMenu {
     position: static;
@@ -332,20 +327,20 @@
     border-radius: 0;
     border-top: none;
     border-left: 3px solid var(--primary);
-    margin: 0 24px 8px;
+    margin: 0 28px 8px;
     animation: none;
   }
   .ctaBtn {
-    margin: 10px 24px 0;
+    margin: 10px 28px 0;
     text-align: center;
     justify-content: center;
-    min-height: 48px;
+    min-height: 52px;
   }
 }
 @media (max-width: 480px) {
-  .mainInner { height: 60px; padding: 0 16px; }
+  .mainInner { height: 64px; padding: 0 16px; }
   .logo img { width: 120px !important; height: 50px !important; }
-  .logoText { font-size: 0.9rem; }
-  .brochureBtn { font-size: 0.7rem; padding: 5px 10px; }
-  .topbarInner { padding: 0 12px; }
+  .logoText { font-size: 1rem; }
+  .brochureBtn { font-size: 0.75rem; padding: 6px 12px; }
+  .topbarInner { padding: 0 16px; }
 }

@@ -1,21 +1,15 @@
 import type { Metadata } from "next";
-import { Lato, Cormorant_Garamond } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { localBusinessSchema } from "@/lib/seo";
 
-const lato = Lato({
-  variable: "--font-lato",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
-  weight: ["300", "400", "700", "900"],
-});
-
-const cormorant = Cormorant_Garamond({
-  variable: "--font-display",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://playhousenursery.ae";
@@ -63,7 +57,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${lato.variable} ${cormorant.variable}`}>
+    <html lang="en" className={montserrat.variable}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <link
@@ -77,7 +71,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema()) }}
         />
       </head>
-      <body style={{ fontFamily: "var(--font-lato), Lato, sans-serif" }}>
+      <body style={{ fontFamily: "var(--font-montserrat), Montserrat, sans-serif" }}>
         <Navbar />
         {children}
         <Footer />
