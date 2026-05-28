@@ -79,7 +79,7 @@ export default function Navbar() {
                 )}
               </div>
             ))}
-            <Link href="/#admission" className={styles.topLink}>Admissions</Link>
+            <Link href="/admissions" className={styles.topLink}>Admissions</Link>
             <Link href="/contact" className={styles.topLink}>Contact Us</Link>
           </nav>
 
@@ -176,17 +176,17 @@ export default function Navbar() {
                     <i className="fas fa-images" /> Gallery
                   </Link>
                   <Link href="/tours" onClick={() => { setMenuOpen(false); setActiveDrop(null); }}>
-                    <i className="fas fa-vr-cardboard" /> Virtual Tours
+                    <i className="fas fa-building" /> Our Facilities
                   </Link>
-                  <Link href="/#testimonials" onClick={() => { setMenuOpen(false); setActiveDrop(null); }}>
-                    <i className="fas fa-star" /> Parents Review
+                  <Link href="/reviews" onClick={() => { setMenuOpen(false); setActiveDrop(null); }}>
+                    <i className="fas fa-star" /> Parents Reviews
                   </Link>
                 </div>
               )}
             </li>
 
             <li>
-              <Link href="/#contact" className={styles.ctaBtn} onClick={() => setMenuOpen(false)}>
+              <Link href="/admissions" className={styles.ctaBtn} onClick={() => setMenuOpen(false)}>
                 Book a Visit
               </Link>
             </li>

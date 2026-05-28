@@ -8,7 +8,7 @@ const faqs = [
   { q: "Do you have outdoor play areas?", a: "Yes. Each branch has dedicated outdoor play areas including gardens, sandboxes, climbing structures and splash zones (seasonal)." },
   { q: "Can you accommodate dietary requirements?", a: "Absolutely. We cater to all dietary needs including allergies, religious requirements and personal preferences. Parents are consulted during enrollment." },
   { q: "What are the sleep arrangements?", a: "We have dedicated nap rooms for younger children from 1:00 PM to 3:00 PM. Bedding is washed weekly and children have their own labelled sheets." },
-  { q: "What is the minimum age for enrollment?", a: "We accept children from 45 days old in our Baby Nest programme, up to 6 years in our School Readiness programme." },
+  { q: "What is the minimum age for enrollment?", a: "We accept children from 45 days old in our Baby Nest programme, up to 5 years in our School Readiness programme." },
   { q: "Are meals included?", a: "Yes — four nutritious meals per day are included: breakfast, morning snack, lunch, and afternoon snack. All food is freshly prepared on-site." },
 ];
 
@@ -40,12 +40,12 @@ export default function HomePage() {
         <div className="container">
           <div className={styles.heroGrid}>
             <div className={styles.heroContent}>
-              <p className={styles.heroEyebrow}>KHDA Approved · British EYFS · 3 UAE Branches</p>
+              <p className={styles.heroEyebrow}>KHDA & ADEK Approved · British EYFS · 3 UAE Branches</p>
               <h1 className={styles.heroTitle}>
                 Where Every Child<br />Blossoms &amp; Thrives
               </h1>
               <p className={styles.heroSub}>
-                A world-class early learning environment for children aged 45 days to 6 years,
+                A world-class early learning environment for children aged 45 days to 5 years,
                 across three branches in the UAE.
               </p>
               <div className={styles.heroActions}>
@@ -85,7 +85,7 @@ export default function HomePage() {
               <p>
                 Our team of qualified British and bilingual educators creates a warm, stimulating environment
                 where children feel safe to explore, ask questions, and grow at their own pace.
-                We are fully licensed and regularly inspected by KHDA.
+                We are fully licensed and approved by KHDA and ADEK.
               </p>
               <a href="#apply" className={styles.aboutBtn}>Leave an application</a>
             </div>
@@ -112,7 +112,7 @@ export default function HomePage() {
               </div>
               <div className={styles.factCard}>
                 <span className={styles.factNum}>KHDA</span>
-                <span className={styles.factLabel}>Licensed & inspected</span>
+                <span className={styles.factLabel}>& ADEK Approved</span>
               </div>
             </div>
           </div>

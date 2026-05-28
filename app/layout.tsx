@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s | Playhouse Nursery Dubai",
   },
   description:
-    "Top British EYFS nursery and kindergarten in the UAE. KHDA approved. 3 branches: Khalidiya, Al Reem & Mirdif. Ages 45 days to 6 years.",
+    "Top British EYFS nursery and kindergarten in the UAE. KHDA & ADEK approved. 3 branches: Khalidiya, Al Reem & Mirdif. Ages 45 days to 5 years.",
   keywords: "nursery Dubai, EYFS nursery Dubai, British nursery Dubai, kindergarten Dubai, playhouse nursery, best nursery Dubai",
   metadataBase: new URL(BASE_URL),
   alternates: { canonical: BASE_URL },
@@ -30,13 +30,13 @@ export const metadata: Metadata = {
     url: BASE_URL,
     siteName: "Playhouse Nursery",
     title: "Playhouse Nursery | Where Fun & Learning Never Ends",
-    description: "Top British EYFS nursery and kindergarten in the UAE. KHDA approved. 3 branches.",
+    description: "Top British EYFS nursery and kindergarten in the UAE. KHDA & ADEK approved. 3 branches.",
     images: [{ url: "/logo.png", width: 1200, height: 630, alt: "Playhouse Nursery UAE" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Playhouse Nursery Dubai | Where Fun & Learning Never Ends",
-    description: "Top British EYFS nursery and kindergarten in Dubai. KHDA approved. 3 branches.",
+    description: "Top British EYFS nursery and kindergarten in Dubai. KHDA & ADEK approved. 3 branches.",
     images: ["/logo.png"],
   },
   icons: {

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "About Us | Playhouse Nursery Dubai",
-  description: "Learn about Playhouse Nursery — a KHDA-approved British EYFS nursery with 3 branches across UAE. Our story, mission, values and team.",
+  description: "Learn about Playhouse Nursery — a KHDA & ADEK approved British EYFS nursery with 3 branches across UAE. Our story, mission, values and team.",
 };
 
 export default function AboutPage() {
@@ -32,7 +32,7 @@ export default function AboutPage() {
                 Where fun &amp; learning never ends
               </h2>
               <p style={{ fontSize: "1.05rem", color: "var(--text-light)", lineHeight: 1.85, marginBottom: 20 }}>
-                Playhouse Nursery was founded with a simple but powerful belief — that the earliest years of a child's life are the most important. Our founders, experienced educators with a passion for child development, set out to create a nursery that felt less like an institution and more like a second home.
+                Playhouse Nursery was built on a simple but powerful belief — that the earliest years of a child's life are the most important. Our experienced team of educators set out to create a nursery that felt less like an institution and more like a second home.
               </p>
               <p style={{ fontSize: "1.05rem", color: "var(--text-light)", lineHeight: 1.85, marginBottom: 20 }}>
                 Starting with a single branch in Khalidiya, Abu Dhabi, Playhouse has grown to three thriving campuses — Khalidiya, Al Reem Island, and Mirdif Dubai — each carrying the same commitment to excellence, warmth, and child-led learning.
@@ -45,7 +45,7 @@ export default function AboutPage() {
               {[
                 { num: "3", label: "UAE Branches" },
                 { num: "45d", label: "Minimum Age" },
-                { num: "KHDA", label: "Licensed & Approved" },
+                { num: "KHDA", label: "& ADEK Approved" },
                 { num: "15", label: "Max Class Size" },
                 { num: "4", label: "Meals Per Day" },
                 { num: "EYFS", label: "British Curriculum" },
@@ -128,7 +128,7 @@ export default function AboutPage() {
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 2, background: "rgba(255,255,255,0.08)" }}>
             {[
-              { icon: "🇦🇪", title: "KHDA Approved", desc: "Fully licensed by the Knowledge and Human Development Authority, Dubai's leading education regulator." },
+              { icon: "🇦🇪", title: "KHDA & ADEK Approved", desc: "Fully licensed by both the Knowledge and Human Development Authority (KHDA) and the Abu Dhabi Department of Education & Knowledge (ADEK)." },
               { icon: "🇬🇧", title: "British EYFS Certified", desc: "Our curriculum is aligned with the UK's Early Years Foundation Stage — one of the world's most respected early education frameworks." },
               { icon: "✅", title: "Regular Inspections", desc: "We welcome regular third-party inspections and consistently maintain outstanding ratings across all branches." },
             ].map((a) => (

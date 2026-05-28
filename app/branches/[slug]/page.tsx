@@ -111,8 +111,9 @@ const branches: Record<string, {
 const programs = [
   { icon: "🍼", title: "Baby Nest", age: "45 days – 1 year", desc: "A safe, nurturing space for your littlest ones with sensory play, tummy time, and gentle routines." },
   { icon: "🧸", title: "Tiny Explorers", age: "1 – 2 years", desc: "Building confidence through discovery — first steps in social interaction, language, and motor skills." },
-  { icon: "🎨", title: "Creative Stars", age: "2 – 4 years", desc: "EYFS-based curriculum blending creativity, numeracy, and literacy through hands-on activities." },
-  { icon: "🎓", title: "School Readiness", age: "4 – 6 years", desc: "Preparing confident learners for primary school with phonics, math, and social-emotional skills." },
+  { icon: "🎨", title: "Little Learners", age: "2 – 3 years", desc: "Creative play meets structured learning — communication, emotional awareness, and early literacy." },
+  { icon: "⭐", title: "Creative Stars", age: "3 – 4 years", desc: "EYFS-based curriculum blending creativity, numeracy, and literacy through hands-on activities." },
+  { icon: "🎓", title: "School Readiness", age: "4 – 5 years", desc: "Preparing confident learners for primary school with phonics, math, and social-emotional skills." },
 ];
 
 export async function generateStaticParams() {
@@ -125,7 +126,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!branch) return { title: "Branch Not Found" };
   return buildMetadata({
     title: `${branch.name} | Playhouse Nursery UAE`,
-    description: `${branch.tagline} — Playhouse Nursery offers KHDA-approved British EYFS early education for ages 45 days to 6 years.`,
+    description: `${branch.tagline} — Playhouse Nursery offers KHDA & ADEK approved British EYFS early education for ages 45 days to 5 years.`,
     path: `/branches/${slug}`,
     keywords: ["nursery UAE", "EYFS nursery", branch.name, slug, "Playhouse Nursery", "British curriculum"],
   });
