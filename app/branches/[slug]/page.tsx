@@ -31,7 +31,7 @@ const branches: Record<string, {
     heroImg: "/images/branches/khalidiya.jpg",
     address: "Al Khalidiya Street, Villa 11/8, Behind Sheraton Khalidiya Hotel, Abu Dhabi",
     phone: "+971 54 263 2235",
-    email: "playhousekhalidiya@gmail.com",
+    email: "Mainbranch@playhousenursery.ae",
     hours: "Sun – Thu, 7:00 AM – 6:00 PM",
     whatsapp: "https://wa.me/971542632235?text=Hi%20Playhouse%20Khalidiya!%20I'd%20like%20to%20know%20more%20about%20your%20nursery.",
     description: "Our main Khalidiya branch features spacious classrooms and dedicated outdoor play areas in the heart of Abu Dhabi. Children enjoy a blend of indoor and outdoor learning experiences designed to spark curiosity and creativity.",
@@ -59,7 +59,7 @@ const branches: Record<string, {
     heroImg: "/images/branches/al-reem.jpg",
     address: "Al Reem Island, Marina Square, Tala Tower, Unit G-203, Abu Dhabi",
     phone: "+971 50 562 4547",
-    email: "playhousealreem@gmail.com",
+    email: "Branch1@playhousenursery.ae",
     hours: "Sun – Thu, 7:00 AM – 6:00 PM",
     whatsapp: "https://wa.me/971505624547?text=Hi%20Playhouse%20Al%20Reem!%20I'd%20like%20to%20know%20more%20about%20your%20nursery.",
     description: "Located on the vibrant Al Reem Island in Marina Square, Tala Tower, our Al Reem branch offers a dedicated art studio, sensory room, and bilingual Arabic-English program. Ideal for island families who want premium early education at their doorstep.",
@@ -87,7 +87,7 @@ const branches: Record<string, {
     heroImg: "/images/branches/mirdif.jpg",
     address: "Mirdif Hills Avenue Mall, Dubai, UAE",
     phone: "+971 52 982 1105",
-    email: "playhousemirdif@gmail.com",
+    email: "Dubaibranch@playhousenursery.ae",
     hours: "Sun – Thu, 7:00 AM – 6:00 PM",
     whatsapp: "https://wa.me/971529821105?text=Hi%20Playhouse%20Mirdif!%20I'd%20like%20to%20know%20more%20about%20your%20nursery.",
     description: "Set in the Mirdif Hills Avenue Mall in Dubai, our Mirdif branch boasts modern facilities, nature-inspired play areas, and convenient mall access. A perfect nurturing environment focused on nature-based learning and creativity.",
@@ -111,8 +111,9 @@ const branches: Record<string, {
 const programs = [
   { icon: "🍼", title: "Baby Nest", age: "45 days – 1 year", desc: "A safe, nurturing space for your littlest ones with sensory play, tummy time, and gentle routines." },
   { icon: "🧸", title: "Tiny Explorers", age: "1 – 2 years", desc: "Building confidence through discovery — first steps in social interaction, language, and motor skills." },
-  { icon: "🎨", title: "Creative Stars", age: "2 – 4 years", desc: "EYFS-based curriculum blending creativity, numeracy, and literacy through hands-on activities." },
-  { icon: "🎓", title: "School Readiness", age: "4 – 6 years", desc: "Preparing confident learners for primary school with phonics, math, and social-emotional skills." },
+  { icon: "🎨", title: "Little Learners", age: "2 – 3 years", desc: "Creative play meets structured learning — communication, emotional awareness, and early literacy." },
+  { icon: "⭐", title: "Creative Stars", age: "3 – 4 years", desc: "EYFS-based curriculum blending creativity, numeracy, and literacy through hands-on activities." },
+  { icon: "🎓", title: "School Readiness", age: "4 – 5 years", desc: "Preparing confident learners for primary school with phonics, math, and social-emotional skills." },
 ];
 
 export async function generateStaticParams() {
@@ -125,7 +126,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!branch) return { title: "Branch Not Found" };
   return buildMetadata({
     title: `${branch.name} | Playhouse Nursery UAE`,
-    description: `${branch.tagline} — Playhouse Nursery offers KHDA-approved British EYFS early education for ages 45 days to 6 years.`,
+    description: `${branch.tagline} — Playhouse Nursery offers KHDA & ADEK approved British EYFS early education for ages 45 days to 5 years.`,
     path: `/branches/${slug}`,
     keywords: ["nursery UAE", "EYFS nursery", branch.name, slug, "Playhouse Nursery", "British curriculum"],
   });

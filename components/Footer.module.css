@@ -1,44 +1,44 @@
 .footer {
   background: var(--dark);
   color: rgba(255,255,255,0.7);
-  padding: 60px 0 0;
+  padding: 72px 0 0;
 }
 .footerGrid {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
-  gap: 40px;
-  padding-bottom: 40px;
+  gap: 48px;
+  padding-bottom: 48px;
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 .footerBrand h3 {
-  font-weight: 800;
+  font-weight: 700;
   color: var(--white);
-  font-size: 1.3rem;
-  margin-bottom: 12px;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
   font-family: var(--font-display);
 }
 .accent { color: var(--secondary); }
 .footerBrand p {
-  font-size: 0.9rem;
-  line-height: 1.8;
-  margin-bottom: 16px;
+  font-size: 1rem;
+  line-height: 1.85;
+  margin-bottom: 20px;
 }
 .brochureLink {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
+  gap: 8px;
   background: var(--secondary);
-  color: var(--dark) !important;
-  font-size: 0.78rem;
+  color: #111 !important;
+  font-size: 0.9rem;
   font-weight: 700;
-  padding: 7px 16px;
-  border-radius: 50px;
-  margin-bottom: 16px;
+  padding: 10px 20px;
+  border-radius: 2px;
+  margin-bottom: 20px;
   letter-spacing: 0.3px;
   transition: all 0.2s;
 }
 .brochureLink:hover {
-  background: var(--secondary-dark) !important;
+  background: #d4911f;
   transform: translateY(-1px);
 }
 .social {
@@ -46,15 +46,15 @@
   gap: 12px;
 }
 .social a {
-  width: 38px;
-  height: 38px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   background: rgba(255,255,255,0.08);
   display: flex;
   align-items: center;
   justify-content: center;
   color: rgba(255,255,255,0.7);
-  font-size: 0.9rem;
+  font-size: 1rem;
   transition: var(--transition);
 }
 .social a:hover {
@@ -63,19 +63,19 @@
   transform: translateY(-2px);
 }
 .footerLinks h4 {
-  font-weight: 800;
+  font-weight: 700;
   color: var(--white);
-  font-size: 0.95rem;
-  margin-bottom: 16px;
+  font-size: 1rem;
+  margin-bottom: 20px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   font-family: var(--font-main);
 }
 .footerLinks li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 .footerLinks a {
-  font-size: 0.88rem;
+  font-size: 0.95rem;
   color: rgba(255,255,255,0.6);
   transition: var(--transition);
 }
@@ -85,8 +85,8 @@
 }
 .footerBottom {
   text-align: center;
-  padding: 20px 0;
-  font-size: 0.85rem;
+  padding: 24px 0;
+  font-size: 0.9rem;
   color: rgba(255,255,255,0.4);
 }
 .footerBottom a {
@@ -100,5 +100,6 @@
   .footerGrid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 768px) {
-  .footerGrid { grid-template-columns: 1fr; gap: 30px; }
+  .footerGrid { grid-template-columns: 1fr; gap: 36px; }
+  .footer { padding: 56px 0 0; }
 }

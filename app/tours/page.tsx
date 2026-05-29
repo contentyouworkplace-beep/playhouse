@@ -1,139 +1,162 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import styles from "./page.module.css";
-import { buildMetadata } from "@/lib/seo";
 
-export const revalidate = 3600;
+export const metadata: Metadata = {
+  title: "Our Facilities | Playhouse Nursery UAE",
+  description: "Explore the facilities at each Playhouse Nursery branch — classrooms, play areas, kitchens, and more. KHDA & ADEK approved.",
+};
 
-export const metadata: Metadata = buildMetadata({
-  title: "Virtual Tours | Playhouse Nursery UAE",
-  description: "Take a virtual tour of Playhouse Nursery branches across UAE. Explore our classrooms, play areas, and facilities.",
-  path: "/tours",
-  keywords: ["virtual tour UAE", "nursery facility tour", "Playhouse Nursery branches"],
-});
-
-const branchTours = [
+const branches = [
   {
     id: "khalidiya",
-    badge: "Khalidiya Branch",
-    color: "khalidiya" as const,
     name: "Playhouse Khalidiya",
-    address: "Al Khalidiya Street, Villa 11/8, Behind Sheraton Khalidiya Hotel, Abu Dhabi",
-    desc: "Our main Khalidiya branch features spacious classrooms and dedicated outdoor play areas in the heart of Abu Dhabi. Children enjoy a blend of indoor and outdoor learning experiences designed to spark curiosity and creativity.",
-    highlights: [
-      { icon: "fa-building", label: "Main Campus" },
-      { icon: "fa-tree", label: "Outdoor Play Area" },
-      { icon: "fa-utensils", label: "Nutritious Kitchen" },
-      { icon: "fa-chalkboard-teacher", label: "Smart Classrooms" },
-      { icon: "fa-video", label: "CCTV Access" },
-      { icon: "fa-baby", label: "Baby Sensory Room" },
-    ],
+    label: "Main Branch — Abu Dhabi",
+    addr: "Al Khalidiya Street, Villa 11/8, Behind Sheraton Khalidiya Hotel, Abu Dhabi",
+    phone: "+971 54 263 2235",
+    email: "Mainbranch@playhousenursery.ae",
     wa: "https://wa.me/971542632235?text=Hi!%20I'd%20like%20to%20book%20a%20visit%20to%20Playhouse%20Khalidiya.",
-    reverse: false,
+    highlights: [
+      { icon: "fa-building", label: "Spacious Main Campus" },
+      { icon: "fa-tree", label: "Dedicated Outdoor Play Area" },
+      { icon: "fa-utensils", label: "Nutritious On-Site Kitchen" },
+      { icon: "fa-chalkboard-teacher", label: "Smart Classrooms" },
+      { icon: "fa-shield-alt", label: "24/7 Security & CCTV" },
+      { icon: "fa-baby", label: "Baby Sensory Room" },
+      { icon: "fa-heartbeat", label: "On-Site Nurse" },
+      { icon: "fa-sun", label: "Outdoor Garden & Sandpit" },
+    ],
+    desc: "Our flagship Khalidiya branch is a spacious, purpose-built nursery in the heart of Abu Dhabi. It features large classrooms, a dedicated baby wing, an outdoor play garden, and a full kitchen preparing four fresh meals daily.",
   },
   {
     id: "al-reem",
-    badge: "Al Reem Branch",
-    color: "alreem" as const,
     name: "Playhouse Al Reem",
-    address: "Al Reem Island, Marina Square, Tala Tower, Unit G-203, Abu Dhabi",
-    desc: "Located on the vibrant Al Reem Island, our branch is designed for island families who want premium early education at their doorstep. Features dedicated creative and STEM zones.",
-    highlights: [
-      { icon: "fa-palette", label: "Art Studio" },
-      { icon: "fa-music", label: "Music Room" },
-      { icon: "fa-flask", label: "STEM Discovery Lab" },
-      { icon: "fa-book-reader", label: "Reading Nook" },
-      { icon: "fa-video", label: "CCTV Access" },
-      { icon: "fa-parking", label: "Easy Parking" },
-    ],
+    label: "Al Reem Island — Abu Dhabi",
+    addr: "Marina Square, Tala Tower, Unit G-203, Al Reem Island, Abu Dhabi",
+    phone: "+971 50 562 4547",
+    email: "Branch1@playhousenursery.ae",
     wa: "https://wa.me/971505624547?text=Hi!%20I'd%20like%20to%20book%20a%20visit%20to%20Playhouse%20Al%20Reem.",
-    reverse: true,
+    highlights: [
+      { icon: "fa-palette", label: "Dedicated Art Studio" },
+      { icon: "fa-music", label: "Music & Movement Room" },
+      { icon: "fa-flask", label: "STEM Discovery Lab" },
+      { icon: "fa-book-reader", label: "Cosy Reading Nook" },
+      { icon: "fa-shield-alt", label: "24/7 Security & CCTV" },
+      { icon: "fa-parking", label: "Convenient Parking" },
+      { icon: "fa-heartbeat", label: "On-Site Nurse" },
+      { icon: "fa-swimmer", label: "Seasonal Splash Zone" },
+    ],
+    desc: "Nestled in the vibrant Marina Square on Al Reem Island, this branch combines premium early education with dedicated creative and STEM zones. Perfect for island families looking for world-class nursery education.",
   },
   {
     id: "mirdif",
-    badge: "Mirdif Branch",
-    color: "mirdif" as const,
     name: "Playhouse Mirdif",
-    address: "Mirdif Hills Avenue Mall, Dubai, UAE",
-    desc: "Our Mirdif branch in Dubai offers modern facilities with nature-inspired play areas and convenient mall access. Children thrive in our nurturing environment with dedicated learning zones.",
-    highlights: [
-      { icon: "fa-seedling", label: "Nature Garden" },
-      { icon: "fa-book", label: "Library Corner" },
-      { icon: "fa-store", label: "Mall Location" },
-      { icon: "fa-sun", label: "Outdoor Classrooms" },
-      { icon: "fa-video", label: "CCTV Access" },
-      { icon: "fa-utensils", label: "Organic Meals" },
-    ],
+    label: "Dubai Branch",
+    addr: "Mirdif Hills Avenue Mall, Dubai, UAE",
+    phone: "+971 52 982 1105",
+    email: "Dubaibranch@playhousenursery.ae",
     wa: "https://wa.me/971529821105?text=Hi!%20I'd%20like%20to%20book%20a%20visit%20to%20Playhouse%20Mirdif.",
-    reverse: false,
+    highlights: [
+      { icon: "fa-seedling", label: "Nature Garden & Outdoor Classrooms" },
+      { icon: "fa-book", label: "Library & Reading Corner" },
+      { icon: "fa-store", label: "Convenient Mall Location" },
+      { icon: "fa-sun", label: "Natural Light Classrooms" },
+      { icon: "fa-shield-alt", label: "24/7 Security & CCTV" },
+      { icon: "fa-utensils", label: "Organic & Fresh Meals" },
+      { icon: "fa-heartbeat", label: "On-Site Nurse" },
+      { icon: "fa-running", label: "Movement & Yoga Studio" },
+    ],
+    desc: "Our Dubai branch inside Mirdif Hills Avenue Mall offers a nature-inspired learning environment with outdoor classrooms, a library corner, and easy mall access — making drop-off and pick-up effortless for busy families.",
   },
 ];
 
-export default function ToursPage() {
+const whyVisit = [
+  { icon: "fa-eye", title: "See It for Yourself", desc: "No website can replace the warmth you feel when you walk through our doors. Come and experience the Playhouse environment first-hand." },
+  { icon: "fa-comments", title: "Ask Our Team", desc: "Our branch heads and educators are on hand to answer all your questions — from curriculum to daily routines to meal plans." },
+  { icon: "fa-child", title: "Bring Your Child", desc: "We encourage families to bring their little ones on the visit. Children often give you the best feedback!" },
+  { icon: "fa-calendar-check", title: "No Commitment Required", desc: "A visit is completely free and obligation-free. We want you to find the right fit for your family." },
+];
+
+export default function FacilitiesPage() {
   return (
     <>
-      {/* Hero */}
-      <section className={styles.hero}>
+      {/* ── HERO ── */}
+      <section style={{ background: "var(--dark)", padding: "160px 0 80px" }}>
         <div className="container">
-          <h1><i className="fas fa-vr-cardboard" /> 360° Virtual Tours</h1>
-          <p>Explore all three Playhouse branches from the comfort of your home. Click, drag, and discover every corner of our nurturing spaces.</p>
-        </div>
-        <div className={styles.heroWave}>
-          <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-            <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,70 1440,60 L1440,120 L0,120 Z" fill="#fff" />
-          </svg>
-        </div>
-      </section>
-
-      {/* Combined Tour */}
-      <section className={styles.combinedTour}>
-        <div className="container">
-          <div className="section-header light">
-            <span className="section-tag">All Branches</span>
-            <h2>Complete Playhouse Experience</h2>
-            <p>Watch our combined 360° tour covering all three branches — Khalidiya, Al Reem, and Mirdif — in one immersive experience.</p>
-          </div>
-          <div className={styles.combinedVideo}>
-            <div className={styles.tourLabel}><i className="fas fa-vr-cardboard" /> 360° Combined Tour</div>
-            <div className={styles.playButton}><i className="fas fa-play" /></div>
-            <div className={styles.tourHint}><i className="fas fa-hand-pointer" /> Click to start immersive tour</div>
+          <span className="section-label" style={{ color: "rgba(255,255,255,0.5)" }}>Our Facilities</span>
+          <h1 style={{ fontSize: "3.5rem", fontWeight: 700, color: "#fff", lineHeight: 1.1, maxWidth: 680, marginBottom: 24 }}>
+            Book a free visit &amp; see Playhouse for yourself
+          </h1>
+          <p style={{ fontSize: "1.1rem", color: "rgba(255,255,255,0.7)", maxWidth: 540, lineHeight: 1.85, marginBottom: 40 }}>
+            Explore our three UAE branches — each designed to inspire curiosity, comfort, and creativity.
+            KHDA &amp; ADEK approved.
+          </p>
+          <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
+            <a href="#khalidiya" style={{ display: "inline-flex", alignItems: "center", padding: "14px 32px", background: "var(--white)", color: "var(--dark)", fontWeight: 700, fontSize: "0.82rem", letterSpacing: "1.5px", textTransform: "uppercase", borderRadius: 2, border: "2px solid var(--white)" }}>
+              Khalidiya
+            </a>
+            <a href="#al-reem" style={{ display: "inline-flex", alignItems: "center", padding: "14px 32px", background: "transparent", color: "var(--white)", fontWeight: 700, fontSize: "0.82rem", letterSpacing: "1.5px", textTransform: "uppercase", borderRadius: 2, border: "2px solid rgba(255,255,255,0.5)" }}>
+              Al Reem
+            </a>
+            <a href="#mirdif" style={{ display: "inline-flex", alignItems: "center", padding: "14px 32px", background: "transparent", color: "var(--white)", fontWeight: 700, fontSize: "0.82rem", letterSpacing: "1.5px", textTransform: "uppercase", borderRadius: 2, border: "2px solid rgba(255,255,255,0.5)" }}>
+              Mirdif
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Individual Branch Tours */}
-      {branchTours.map((branch, idx) => (
-        <section key={branch.id} id={branch.id} className={`${styles.tourSection} ${idx % 2 !== 0 ? styles.tourSectionAlt : ""}`}>
-          <div className="container">
-            <div className={`${styles.tourLayout} ${branch.reverse ? styles.tourLayoutReverse : ""}`}>
-              <div className={styles.tourVideoArea}>
-                <span className={styles.tourLabel}><i className="fas fa-vr-cardboard" /> 360° Tour</span>
-                <div className={styles.playButton}><i className="fas fa-play" /></div>
-                <div className={styles.tourHint}><i className="fas fa-hand-pointer" /> Drag to look around</div>
+      {/* ── WHY VISIT ── */}
+      <section style={{ padding: "80px 0", background: "var(--off-white)", borderBottom: "1px solid var(--border)" }}>
+        <div className="container">
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 2, background: "var(--border)" }}>
+            {whyVisit.map((w) => (
+              <div key={w.title} style={{ background: "var(--white)", padding: "36px 28px" }}>
+                <i className={`fas ${w.icon}`} style={{ fontSize: "1.6rem", color: "var(--dark)", marginBottom: 16, display: "block" }} />
+                <h4 style={{ fontSize: "1rem", fontWeight: 700, color: "var(--dark)", marginBottom: 10 }}>{w.title}</h4>
+                <p style={{ fontSize: "0.88rem", color: "var(--text-light)", lineHeight: 1.75 }}>{w.desc}</p>
               </div>
-              <div className={styles.tourDetails}>
-                <span className={`${styles.branchBadge} ${styles[branch.color]}`}>
-                  <i className="fas fa-map-marker-alt" /> {branch.badge}
-                </span>
-                <h2>{branch.name}</h2>
-                <div className={styles.tourAddress}>
-                  <i className="fas fa-map-marker-alt" />
-                  <span>{branch.address}</span>
-                </div>
-                <p>{branch.desc}</p>
-                <div className={styles.tourHighlights}>
-                  {branch.highlights.map((h) => (
-                    <div key={h.label} className={styles.tourHighlight}>
-                      <i className={`fas ${h.icon}`} />
-                      <span>{h.label}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── BRANCHES ── */}
+      {branches.map((b, i) => (
+        <section key={b.id} id={b.id} style={{ padding: "100px 0", background: i % 2 === 0 ? "var(--white)" : "var(--off-white)" }}>
+          <div className="container">
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "start" }}>
+              <div style={{ order: i % 2 === 0 ? 0 : 1 }}>
+                <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", color: "var(--text-light)", marginBottom: 8 }}>{b.label}</p>
+                <h2 style={{ fontSize: "2.2rem", fontWeight: 700, color: "var(--dark)", marginBottom: 20, lineHeight: 1.2 }}>{b.name}</h2>
+                <p style={{ fontSize: "1.05rem", color: "var(--text-light)", lineHeight: 1.85, marginBottom: 32 }}>{b.desc}</p>
+
+                <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 36 }}>
+                  {[
+                    { icon: "fa-map-marker-alt", text: b.addr },
+                    { icon: "fa-phone", text: b.phone },
+                    { icon: "fa-envelope", text: b.email },
+                    { icon: "fa-clock", text: "Sun – Thu, 7:00 AM – 6:00 PM" },
+                  ].map((item) => (
+                    <div key={item.icon} style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
+                      <i className={`fas ${item.icon}`} style={{ color: "var(--text-light)", width: 16, marginTop: 4, flexShrink: 0, fontSize: "0.85rem" }} />
+                      <span style={{ fontSize: "0.92rem", color: "var(--text)" }}>{item.text}</span>
                     </div>
                   ))}
                 </div>
-                <div className={styles.tourActions}>
-                  <a href={branch.wa} className="btn btn-whatsapp" style={{ width: "auto" }} target="_blank" rel="noopener noreferrer">
-                    <i className="fab fa-whatsapp" /> Book a Visit
-                  </a>
-                  <Link href="/#contact" className="btn btn-outline">View Details</Link>
+
+                <a href={b.wa} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp" style={{ width: "auto", display: "inline-flex" }}>
+                  <i className="fab fa-whatsapp" /> Book a Visit
+                </a>
+              </div>
+
+              <div style={{ order: i % 2 === 0 ? 1 : 0 }}>
+                <h4 style={{ fontSize: "0.72rem", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", color: "var(--text-light)", marginBottom: 20 }}>Facilities & Highlights</h4>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 2, background: "var(--border)" }}>
+                  {b.highlights.map((h) => (
+                    <div key={h.label} style={{ background: "var(--white)", padding: "24px 20px", display: "flex", alignItems: "flex-start", gap: 14 }}>
+                      <i className={`fas ${h.icon}`} style={{ color: "var(--dark)", fontSize: "1.1rem", marginTop: 2, flexShrink: 0 }} />
+                      <span style={{ fontSize: "0.88rem", fontWeight: 600, color: "var(--dark)", lineHeight: 1.4 }}>{h.label}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -141,18 +164,24 @@ export default function ToursPage() {
         </section>
       ))}
 
-      {/* Book In Person CTA */}
-      <section className={styles.bookCta}>
+      {/* ── ACCREDITATION STRIP ── */}
+      <section style={{ padding: "60px 0", background: "var(--dark)" }}>
         <div className="container">
-          <h2>Ready to See It in Person?</h2>
-          <p>Nothing beats an in-person visit. Book a tour at your nearest Playhouse branch and experience the magic firsthand.</p>
-          <div className={styles.bookCtaButtons}>
-            <a href="https://wa.me/971XXXXXXXXX?text=I'd%20like%20to%20book%20an%20in-person%20tour!" className="btn btn-lg" style={{ background: "white", color: "var(--primary)", borderColor: "white" }} target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-whatsapp" /> Book via WhatsApp
-            </a>
-            <Link href="/#contact" className="btn btn-lg" style={{ background: "transparent", color: "white", borderColor: "rgba(255,255,255,0.5)" }}>
-              <i className="fas fa-phone" /> Call Us
-            </Link>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 24 }}>
+            <div>
+              <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", color: "rgba(255,255,255,0.5)", marginBottom: 8 }}>Approvals & Accreditations</p>
+              <h3 style={{ fontSize: "1.6rem", fontWeight: 700, color: "#fff", lineHeight: 1.2 }}>
+                KHDA &amp; ADEK Approved · British EYFS · Ages 45 days – 5 years
+              </h3>
+            </div>
+            <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
+              <Link href="/contact" style={{ display: "inline-flex", alignItems: "center", padding: "14px 36px", background: "var(--white)", color: "var(--dark)", fontWeight: 700, fontSize: "0.82rem", letterSpacing: "1.5px", textTransform: "uppercase", borderRadius: 2, border: "2px solid var(--white)" }}>
+                Contact Us
+              </Link>
+              <Link href="/#apply" style={{ display: "inline-flex", alignItems: "center", padding: "14px 32px", background: "transparent", color: "var(--white)", fontWeight: 700, fontSize: "0.82rem", letterSpacing: "1.5px", textTransform: "uppercase", borderRadius: 2, border: "2px solid rgba(255,255,255,0.5)" }}>
+                Apply Now
+              </Link>
+            </div>
           </div>
         </div>
       </section>

@@ -11,24 +11,6 @@ export const metadata: Metadata = buildMetadata({
   keywords: ["Playhouse Nursery team", "nursery teachers UAE", "early years educators"],
 });
 
-const leadership = [
-  {
-    name: "Mrs. Saloni",
-    role: "Founder & Principal",
-    emoji: "👩‍🏫",
-    bg: "linear-gradient(135deg, #FFE0B2, #FFCC80)",
-    bio: "With over 15 years in early childhood education, Saloni founded Playhouse Nursery with a vision to create a nurturing, world-class learning environment for children in Dubai.",
-    quals: ["M.Ed Early Childhood", "CACHE Level 5"],
-  },
-  {
-    name: "Mr. Ahmed Al Rashid",
-    role: "Academic Director",
-    emoji: "👨‍💼",
-    bg: "linear-gradient(135deg, #B3E5FC, #81D4FA)",
-    bio: "Ahmed oversees curriculum development across all branches, ensuring our EYFS framework meets the highest international standards while embracing UAE heritage and culture.",
-    quals: ["B.Ed Honours", "EYFS Specialist"],
-  },
-];
 
 const branches = [
   {
@@ -76,35 +58,6 @@ export default function StaffPage() {
           <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
             <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,70 1440,60 L1440,120 L0,120 Z" fill="#fff" />
           </svg>
-        </div>
-      </section>
-
-      {/* Leadership */}
-      <section className={styles.staffSection}>
-        <div className="container">
-          <div className="section-header">
-            <span className="section-tag">Leadership</span>
-            <h2>Our Founders &amp; Directors</h2>
-          </div>
-          <div className={styles.leadershipGrid}>
-            {leadership.map((l) => (
-              <div key={l.name} className={`${styles.staffCard} ${styles.leadershipCard}`}>
-                <div className={styles.staffPhoto} style={{ background: l.bg }}>
-                  <span className={styles.staffEmoji}>{l.emoji}</span>
-                </div>
-                <div className={styles.staffInfo}>
-                  <h4>{l.name}</h4>
-                  <span className={styles.staffRole}>{l.role}</span>
-                  <p>{l.bio}</p>
-                  <div className={styles.staffQuals}>
-                    {l.quals.map((q) => (
-                      <span key={q} className={styles.staffQual}>{q}</span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 

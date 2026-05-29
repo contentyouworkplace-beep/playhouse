@@ -13,11 +13,12 @@ const branches = [
 ];
 
 const services = [
-  { label: "Baby Nest (45d – 1yr)", href: "/#programs" },
-  { label: "Tiny Explorers (1 – 2yr)", href: "/#programs" },
-  { label: "Creative Stars (2 – 4yr)", href: "/#programs" },
-  { label: "School Readiness (4 – 6yr)", href: "/#programs" },
-  { label: "After School Care", href: "/#programs" },
+  { label: "Our Curriculum", href: "/curriculum", icon: "fa-book-open" },
+  { label: "Baby Nest (45d – 1yr)", href: "/#programs", icon: "fa-baby" },
+  { label: "Tiny Explorers (1 – 2yr)", href: "/#programs", icon: "fa-child" },
+  { label: "Little Learners (2 – 3yr)", href: "/#programs", icon: "fa-paint-brush" },
+  { label: "Creative Stars (3 – 4yr)", href: "/#programs", icon: "fa-star" },
+  { label: "School Readiness (4 – 5yr)", href: "/#programs", icon: "fa-graduation-cap" },
 ];
 
 export default function Navbar() {
@@ -78,9 +79,8 @@ export default function Navbar() {
                 )}
               </div>
             ))}
-            <Link href="/staff" className={styles.topLink}>Blog</Link>
-            <Link href="/#contact" className={styles.topLink}>Registration Steps</Link>
-            <Link href="/#contact" className={styles.topLink}>Contact Us</Link>
+            <Link href="/admissions" className={styles.topLink}>Admissions</Link>
+            <Link href="/contact" className={styles.topLink}>Contact Us</Link>
           </nav>
 
           {/* Right side: socials + brochure */}
@@ -141,15 +141,11 @@ export default function Navbar() {
               </button>
               {activeDrop === "about" && (
                 <div className={styles.dropMenu}>
-                  <Link href="/#principal" onClick={() => { setMenuOpen(false); setActiveDrop(null); }}>Our Story</Link>
-                  <Link href="/staff" onClick={() => { setMenuOpen(false); setActiveDrop(null); }}>Our Team</Link>
-                  <Link href="/#awards" onClick={() => { setMenuOpen(false); setActiveDrop(null); }}>Awards & Affiliations</Link>
+                  <Link href="/about" onClick={() => { setMenuOpen(false); setActiveDrop(null); }}><i className="fas fa-heart" /> Our Story</Link>
+                  <Link href="/staff" onClick={() => { setMenuOpen(false); setActiveDrop(null); }}><i className="fas fa-users" /> Our Team</Link>
+                  <Link href="/about#awards" onClick={() => { setMenuOpen(false); setActiveDrop(null); }}><i className="fas fa-award" /> Awards & KHDA</Link>
                 </div>
               )}
-            </li>
-
-            <li>
-              <Link href="/#curriculum" onClick={() => setMenuOpen(false)}>Our Curriculum</Link>
             </li>
 
             {/* Our Services dropdown */}
@@ -159,26 +155,38 @@ export default function Navbar() {
               </button>
               {activeDrop === "services" && (
                 <div className={styles.dropMenu}>
-                  {services.map((s) => (
-                    <Link key={s.label} href={s.href} onClick={() => { setMenuOpen(false); setActiveDrop(null); }}>
-                      {s.label}
+                  {services.map((s, i) => (
+                    <Link key={s.label} href={s.href} onClick={() => { setMenuOpen(false); setActiveDrop(null); }}
+                      style={i === 0 ? { borderBottom: "2px solid var(--border)", marginBottom: "4px" } : {}}>
+                      <i className={`fas ${s.icon}`} /> {s.label}
                     </Link>
                   ))}
                 </div>
               )}
             </li>
 
-            <li>
-              <Link href="/gallery" onClick={() => setMenuOpen(false)}>Gallery</Link>
+            {/* Explore dropdown */}
+            <li className={styles.dropItem}>
+              <button className={styles.dropTrigger} onClick={() => toggleDrop("explore")}>
+                Explore <i className="fas fa-chevron-down" />
+              </button>
+              {activeDrop === "explore" && (
+                <div className={styles.dropMenu}>
+                  <Link href="/gallery" onClick={() => { setMenuOpen(false); setActiveDrop(null); }}>
+                    <i className="fas fa-images" /> Gallery
+                  </Link>
+                  <Link href="/tours" onClick={() => { setMenuOpen(false); setActiveDrop(null); }}>
+                    <i className="fas fa-building" /> Our Facilities
+                  </Link>
+                  <Link href="/reviews" onClick={() => { setMenuOpen(false); setActiveDrop(null); }}>
+                    <i className="fas fa-star" /> Parents Reviews
+                  </Link>
+                </div>
+              )}
             </li>
+
             <li>
-              <Link href="/tours" onClick={() => setMenuOpen(false)}>Virtual Tours</Link>
-            </li>
-            <li>
-              <Link href="/#testimonials" onClick={() => setMenuOpen(false)}>Parents Review</Link>
-            </li>
-            <li>
-              <Link href="/#contact" className={styles.ctaBtn} onClick={() => setMenuOpen(false)}>
+              <Link href="/admissions" className={styles.ctaBtn} onClick={() => setMenuOpen(false)}>
                 Book a Visit
               </Link>
             </li>

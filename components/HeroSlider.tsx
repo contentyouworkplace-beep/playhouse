@@ -11,6 +11,7 @@ const slides = [
 ];
 
 export default function HeroSlider() {
+  // Start at 0 — first image is visible immediately, no animation
   const [current, setCurrent] = useState(0);
 
   const next = useCallback(() => {
@@ -27,12 +28,7 @@ export default function HeroSlider() {
       {slides.map((slide, i) => (
         <div
           key={slide.src}
-          className={styles.slide}
-          style={{
-            opacity: i === current ? 1 : 0,
-            zIndex: i === current ? 2 : 0,
-            visibility: i === current ? "visible" : "hidden",
-          }}
+          className={`${styles.slide} ${i === current ? styles.slideActive : ""}`}
         >
           <Image
             src={slide.src}
@@ -40,7 +36,11 @@ export default function HeroSlider() {
             fill
             priority={i === 0}
             sizes="100vw"
-            style={{ objectFit: "cover", objectPosition: "center 30%" }}
+            style={{
+              objectFit: "cover",
+              objectPosition: "center 30%",
+              filter: "brightness(0.82) saturate(0.9)",
+            }}
           />
         </div>
       ))}
