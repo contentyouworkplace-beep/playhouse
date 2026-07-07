@@ -1,0 +1,302 @@
+/* ============================================
+   PLAYHOUSE NURSERY — GLOBAL STYLES
+   Pure white. Pure black. Clean.
+   ============================================ */
+
+:root {
+  /* --- ONLY white, black, grays --- */
+  --white:      #FFFFFF;
+  --off-white:  #F8F8F8;
+  --light-gray: #F0F0F0;
+  --border:     #E0E0E0;
+  --text-light: #888888;
+  --text:       #333333;
+  --dark:       #111111;
+  --black:      #000000;
+
+  /* --- Accent (one only — black buttons) --- */
+  --primary:      #111111;
+  --primary-dark: #000000;
+  --primary-light: #F0F0F0;
+
+  /* --- WhatsApp (keep green for WhatsApp only) --- */
+  --whatsapp:      #25D366;
+  --whatsapp-dark: #128C7E;
+
+  /* --- Shadows (very subtle on white) --- */
+  --shadow-sm: 0 1px 4px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.10);
+
+  /* --- Radii --- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+
+  /* --- Fonts --- */
+  --font-main:    var(--font-montserrat), 'Montserrat', sans-serif;
+  --font-display: var(--font-montserrat), 'Montserrat', sans-serif;
+
+  /* --- Transitions --- */
+  --transition: 0.25s ease;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 18px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  color: var(--text);
+  line-height: 1.75;
+  background: var(--white);
+  overflow-x: hidden;
+  font-family: var(--font-main);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-main);
+  color: var(--dark);
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; transition: var(--transition); }
+ul { list-style: none; }
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ---- Section Headers ---- */
+.section-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 14px;
+  font-family: var(--font-main);
+}
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.section-header .section-label { display: inline-block; }
+.section-header h2 {
+  font-size: 3rem;
+  color: var(--dark);
+  margin-bottom: 16px;
+  font-weight: 400;
+}
+.section-header p {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  max-width: 580px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* ---- Old section-tag kept for compat ---- */
+.section-tag {
+  display: inline-block;
+  background: var(--light-gray);
+  color: var(--text);
+  font-weight: 700;
+  font-size: 0.72rem;
+  padding: 5px 16px;
+  border-radius: 2px;
+  margin-bottom: 14px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-family: var(--font-main);
+}
+.section-header.light .section-tag { background: rgba(255,255,255,0.15); color: var(--white); }
+.section-header.light h2,
+.section-header.light p { color: var(--white); }
+
+/* ---- Buttons ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 14px 36px;
+  border-radius: 2px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+  letter-spacing: 0.5px;
+  font-family: var(--font-main);
+  text-transform: uppercase;
+}
+.btn-sm  { padding: 10px 24px; font-size: 0.82rem; }
+.btn-lg  { padding: 17px 44px; font-size: 1rem; }
+
+.btn-primary {
+  background: var(--dark);
+  color: var(--white);
+  border-color: var(--dark);
+}
+.btn-primary:hover {
+  background: var(--black);
+  border-color: var(--black);
+  transform: translateY(-1px);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--dark);
+  border-color: var(--dark);
+}
+.btn-outline:hover {
+  background: var(--dark);
+  color: var(--white);
+  transform: translateY(-1px);
+}
+.btn-whatsapp {
+  background: var(--whatsapp);
+  color: var(--white);
+  border-color: var(--whatsapp);
+  width: 100%;
+  justify-content: center;
+  font-size: 0.95rem;
+  padding: 14px 24px;
+}
+.btn-whatsapp:hover {
+  background: var(--whatsapp-dark);
+  border-color: var(--whatsapp-dark);
+  transform: translateY(-1px);
+}
+
+/* ---- Divider ---- */
+.divider {
+  width: 48px;
+  height: 2px;
+  background: var(--dark);
+  margin: 0 auto 20px;
+}
+
+/* ---- Animations ---- */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0) translateX(-50%); }
+  50%       { transform: translateY(-8px) translateX(-50%); }
+}
+
+/* ---- Responsive base ---- */
+@media (max-width: 768px) {
+  html { font-size: 16px; }
+  .section-header h2 { font-size: 2.2rem; }
+  .container { padding: 0 20px; }
+}
+@media (max-width: 480px) {
+  html { font-size: 15px; }
+  .section-header h2 { font-size: 1.8rem; }
+}
+
+/* ---- Responsive Grids Helper Classes ---- */
+.grid-2col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+@media (max-width: 768px) {
+  .grid-2col {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.grid-3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+@media (max-width: 1024px) {
+  .grid-3col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .grid-3col {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.grid-4col {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+@media (max-width: 1024px) {
+  .grid-4col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .grid-4col {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}
+
+.about-section-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+@media (max-width: 1024px) {
+  .about-section-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.branch-section-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .branch-section-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: stretch;
+  }
+  .branch-section-grid > div {
+    order: unset !important;
+  }
+}
+
+.curriculum-program-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 48px;
+  align-items: start;
+}
+@media (max-width: 768px) {
+  .curriculum-program-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

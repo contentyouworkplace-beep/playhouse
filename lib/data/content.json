@@ -1,0 +1,660 @@
+{
+  "users": [
+    {
+      "email": "admin@playhousenursery.ae",
+      "password": "adminpassword",
+      "role": "Admin",
+      "name": "Super Admin"
+    },
+    {
+      "email": "manager@playhousenursery.ae",
+      "password": "managerpassword",
+      "role": "Manager",
+      "name": "Branch Manager"
+    },
+    {
+      "email": "newmanager@playhousenursery.ae",
+      "password": "newpassword",
+      "role": "Manager",
+      "name": "New Assistant"
+    }
+  ],
+  "settings": {
+    "siteName": "Playhouse Nursery",
+    "logoText": "Playhouse",
+    "logoAccent": "Nursery",
+    "logoUrl": "/siteicon.png",
+    "email": "info@playhousenursery.ae",
+    "phone": "+971 2 666 1111",
+    "instagram": "https://www.instagram.com/playhousenursery.alreem/",
+    "facebook": "https://www.facebook.com/PlayhouseNurseryUAE/",
+    "youtube": "https://www.youtube.com/@playhouseuae",
+    "tiktok": "https://www.tiktok.com/@playhouseuae"
+  },
+  "hero": {
+    "title": "Where every child blossoms",
+    "subtitle": "KHDA & ADEK approved British EYFS nursery across 3 branches in the UAE — Khalidiya, Al Reem & Mirdif. Ages 45 days to 5 years (Dubai) / 4 years (Abu Dhabi).",
+    "bgImage": "/images/gallery/outdoor-play.jpg",
+    "applyBtnText": "Apply Now",
+    "tourBtnText": "Book a Visit"
+  },
+  "branches": [
+    {
+      "id": "khalidiya",
+      "name": "Playhouse Khalidiya",
+      "label": "Khalidiya Branch (Abu Dhabi)",
+      "slug": "khalidiya",
+      "color": "#4E8B6F",
+      "gradient": "linear-gradient(135deg, #4E8B6F, #3C6E56)",
+      "heroImg": "/images/branches/khalidiya.jpg",
+      "address": "Al Khalidiya, Street 15, Villa 42, Abu Dhabi",
+      "phone": "+971 2 666 3333",
+      "email": "playhousekhalidiya@gmail.com",
+      "hours": "Mon – Fri, 7:00 AM – 6:00 PM",
+      "whatsapp": "https://wa.me/97126663333?text=Hi%20Playhouse%20Khalidiya!",
+      "description": "Our main campus in Abu Dhabi, located in the quiet and accessible neighborhood of Al Khalidiya. This branch features bright, spacious classrooms, a large outdoor play area, a dedicated sensory gym, and is fully ADEK approved.",
+      "highlights": [
+        {
+          "icon": "fa-sun",
+          "label": "Spacious Main Campus"
+        },
+        {
+          "icon": "fa-shapes",
+          "label": "Dedicated Outdoor Play Area"
+        },
+        {
+          "icon": "fa-utensils",
+          "label": "Nutritious Meals Option Available"
+        },
+        {
+          "icon": "fa-school",
+          "label": "Well-Equipped Classrooms"
+        },
+        {
+          "icon": "fa-shield-alt",
+          "label": "24/7 Security & CCTV"
+        },
+        {
+          "icon": "fa-baby",
+          "label": "Baby Sensory Room"
+        },
+        {
+          "icon": "fa-user-nurse",
+          "label": "On-Site Nurse"
+        },
+        {
+          "icon": "fa-tree",
+          "label": "Outdoor Garden & Sandpit"
+        }
+      ],
+      "galleryImages": [
+        "/images/gallery/sensory-play.jpg",
+        "/images/gallery/outdoor-garden.jpg",
+        "/images/gallery/baby-nest.jpg",
+        "/images/gallery/national-day.jpg"
+      ]
+    },
+    {
+      "id": "al-reem",
+      "name": "Playhouse Al Reem",
+      "label": "Al Reem Branch (Abu Dhabi)",
+      "slug": "al-reem",
+      "color": "#E8A84E",
+      "gradient": "linear-gradient(135deg, #E8A84E, #C98F38)",
+      "heroImg": "/images/branches/al-reem.jpg",
+      "address": "Al Reem Island, Marina Square, Tala Tower, Unit G-203, Abu Dhabi",
+      "phone": "+971 50 562 4547",
+      "email": "playhousealreem@gmail.com",
+      "hours": "Mon – Fri, 7:00 AM – 6:00 PM",
+      "whatsapp": "https://wa.me/971505624547?text=Hi%20Playhouse%20Al%20Reem!",
+      "description": "Located on the vibrant Al Reem Island in Marina Square, Tala Tower, our Al Reem branch offers a dedicated art studio, sensory room, and bilingual Arabic-English program. Ideal for island families who want premium early education at their doorstep.",
+      "highlights": [
+        {
+          "icon": "fa-tree",
+          "label": "Outdoor Play Area"
+        },
+        {
+          "icon": "fa-shapes",
+          "label": "Pretend Play Area"
+        },
+        {
+          "icon": "fa-globe",
+          "label": "Cultural Area"
+        },
+        {
+          "icon": "fa-language",
+          "label": "Arabic Class"
+        },
+        {
+          "icon": "fa-book-reader",
+          "label": "Reading Area"
+        },
+        {
+          "icon": "fa-school",
+          "label": "Well-Equipped Classrooms"
+        }
+      ],
+      "galleryImages": [
+        "/images/gallery/art-class.jpg",
+        "/images/gallery/music-room.jpg",
+        "/images/gallery/science.jpg",
+        "/images/gallery/graduation.jpg"
+      ],
+      "staff": [
+        {
+          "name": "Ms. Saloni",
+          "role": "Principal",
+          "emoji": "👩‍💼",
+          "bg": "linear-gradient(135deg, #FFD1A9, #FFB07C)",
+          "quals": [
+            "Nursing Assistant Trained",
+            "13 years in education field"
+          ]
+        },
+        {
+          "name": "Ms. Maricel",
+          "role": "Secretary",
+          "emoji": "👩‍💻",
+          "bg": "linear-gradient(135deg, #B3E5FC, #81D4FA)",
+          "quals": [
+            "Bachelor's degree in Commerce",
+            "Nursing Assistant Trained",
+            "20 years in administration"
+          ]
+        },
+        {
+          "name": "Ms. Omaya",
+          "role": "Teacher",
+          "emoji": "👩‍🏫",
+          "bg": "linear-gradient(135deg, #C8E6C9, #A5D6A7)",
+          "quals": [
+            "Bachelor's degree in Art",
+            "Cache Level 3",
+            "7 years in early years"
+          ]
+        },
+        {
+          "name": "Ms. Sharmila",
+          "role": "Teacher",
+          "emoji": "👩‍🏫",
+          "bg": "linear-gradient(135deg, #F8BBD0, #F48FB1)",
+          "quals": [
+            "Bachelor's degree in Montessori",
+            "13 years in early years"
+          ]
+        },
+        {
+          "name": "Ms. Aya",
+          "role": "Teacher",
+          "emoji": "👩‍🏫",
+          "bg": "linear-gradient(135deg, #D1C4E9, #B39DDB)",
+          "quals": [
+            "General Diploma in Education",
+            "4 years in early years"
+          ]
+        },
+        {
+          "name": "Ms. Wilsie",
+          "role": "Assistant Teacher",
+          "emoji": "👩‍🎓",
+          "bg": "linear-gradient(135deg, #FFECB3, #FFE082)",
+          "quals": [
+            "Bachelor's degree in Elementary Education",
+            "8 years in early years"
+          ]
+        },
+        {
+          "name": "Ms. Dinithi",
+          "role": "Assistant Teacher",
+          "emoji": "👩‍🎓",
+          "bg": "linear-gradient(135deg, #E1BEE7, #CE93D8)",
+          "quals": [
+            "Diploma in Human Resource",
+            "Cache Level 2",
+            "3 years in early years"
+          ]
+        },
+        {
+          "name": "Ms. Anandjot",
+          "role": "Assistant Teacher",
+          "emoji": "👩‍🎓",
+          "bg": "linear-gradient(135deg, #B2DFDB, #80CBC4)",
+          "quals": [
+            "Bachelor's degree in Arts",
+            "Diploma of Elementary Education",
+            "8 years in early years"
+          ]
+        },
+        {
+          "name": "Ms. Rechilda",
+          "role": "Assistant Teacher",
+          "emoji": "👩‍🎓",
+          "bg": "linear-gradient(135deg, #FFCCBC, #FFAB91)",
+          "quals": [
+            "Bachelor's degree in Fine Arts",
+            "6 years in early years"
+          ]
+        },
+        {
+          "name": "Ms. Melissa",
+          "role": "Cleaner",
+          "emoji": "🧹",
+          "bg": "linear-gradient(135deg, #CFD8DC, #B0BEC5)",
+          "quals": [
+            "Nursing Assistant Training",
+            "High School Diploma",
+            "5 years experience"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mirdif",
+      "name": "Playhouse Mirdif",
+      "label": "Mirdif Branch (Dubai)",
+      "slug": "mirdif",
+      "color": "#D46B8B",
+      "gradient": "linear-gradient(135deg, #D46B8B, #C25475)",
+      "heroImg": "/images/branches/mirdif.jpg",
+      "address": "Mirdif Golden Gate, First Floor, Shop FF-08, Dubai",
+      "phone": "+971 4 555 6789",
+      "email": "playhousemirdif@gmail.com",
+      "hours": "Mon – Fri, 7:00 AM – 6:00 PM",
+      "whatsapp": "https://wa.me/97145556789?text=Hi%20Playhouse%20Mirdif!",
+      "description": "Our Dubai campus in the family-friendly community of Mirdif. Conveniently located at Golden Gate with excellent parking, this KHDA approved branch features large sensory play zones, dynamic learning centers, and a child-led outdoor garden area.",
+      "highlights": [
+        {
+          "icon": "fa-child",
+          "label": "Sensory Gym & Play Area"
+        },
+        {
+          "icon": "fa-seedling",
+          "label": "Nature Exploration Garden"
+        },
+        {
+          "icon": "fa-palette",
+          "label": "Arts & Creative Studio"
+        },
+        {
+          "icon": "fa-school",
+          "label": "Well-Equipped Classrooms"
+        },
+        {
+          "icon": "fa-laptop-code",
+          "label": "STEM Early Learning Labs"
+        },
+        {
+          "icon": "fa-utensils",
+          "label": "Nutritious Meals Option Available"
+        }
+      ],
+      "galleryImages": [
+        "/images/branches/mirdif.jpg",
+        "/images/gallery/sensory-play.jpg",
+        "/images/gallery/art-class.jpg",
+        "/images/gallery/graduation.jpg"
+      ]
+    }
+  ],
+  "programmes": [
+    {
+      "badge": "45 days – 1 year",
+      "title": "Baby Nest",
+      "description": "A safe, nurturing space for your littlest ones with sensory play, tummy time, and gentle routines that mirror home.",
+      "features": [
+        "1:3 carer-to-baby ratio",
+        "Sensory development focus",
+        "Daily photo updates to parents"
+      ]
+    },
+    {
+      "badge": "1 – 2 years",
+      "title": "Tiny Explorers",
+      "description": "Building confidence through discovery — first steps in social interaction, language, and fine motor development.",
+      "features": [
+        "First words & language play",
+        "Social skill foundations",
+        "Outdoor exploration daily"
+      ]
+    },
+    {
+      "badge": "2 – 3 years",
+      "title": "Creative Stars",
+      "description": "Fostering active imaginations through messy play, music, storytelling, and developing independent choices.",
+      "features": [
+        "Messy play & sensory art",
+        "Independence milestones",
+        "Weekly music & movement"
+      ]
+    },
+    {
+      "badge": "4 – 5 years (Available at our Dubai branch)",
+      "title": "School Readiness",
+      "description": "Preparing confident, happy learners for primary school with phonics, maths, and social-emotional skills.",
+      "features": [
+        "EYFS literacy & phonics",
+        "Early maths concepts",
+        "Transition support program"
+      ]
+    }
+  ],
+  "assurances": {
+    "careAndComfort": [
+      "Electronic entry systems & 24/7 on-site security",
+      "Full CCTV coverage",
+      "Air filtration and regular deep cleaning",
+      "Dedicated rest rooms with individual bedding"
+    ],
+    "healthAndSafety": [
+      "Table etiquette taught from age 2",
+      "Bus transportation available"
+    ],
+    "teachingExcellence": [
+      "British Early Years Foundation Stage (EYFS) Curriculum",
+      "CACHE Level 3 (or equivalent) qualified teachers",
+      "Play-based, child-centred learning",
+      "Weekly themed learning experiences",
+      "Individual learning journeys and progress tracking",
+      "Daily parent reports with photos and updates",
+      "Focus on confidence, independence, and kindness",
+      "Preparing children for a successful transition to school"
+    ]
+  },
+  "reviews": [
+    {
+      "name": "Madhuri Bhardwaj",
+      "branch": "Al Reem",
+      "rating": 5,
+      "text": "Our experience with this nursery has been truly wonderful. This is where my son began his very first learning journey, and over the past two years, it has become a place filled with beautiful memories, growth, and happiness. Now, as he is going to move to the next chapter of his education, we are filled with gratitude for everything the nursery has done for him. Thank you for creating such a caring, nurturing, and encouraging environment where children can learn, play, and grow with confidence. Your support in developing his social skills, encouraging his gross motor development, and preparing him for the next stage of school has been invaluable. A special thank you to Ms. Saloni, Ms. Omaya, Ms. Wilsy, and every member of the team who played a part in his journey and apologies if I missed mentioning anyone by name every member of the team including cleaning staff are equally valuable. Thank you for all your kindness, care and dedication. We will always cherish the memories we made here. Thank you for your outstanding care, guidance, and service. We wish the entire team continued success in shaping many more young minds.",
+      "since": "Parent review"
+    },
+    {
+      "name": "Leena Awada",
+      "branch": "Al Reem",
+      "rating": 5,
+      "text": "I am extremely grateful to Playhouse Nursery for the love, care, and support they have given my two children. Both of my kids joined the nursery at just 3 months old, as I did not have anyone else to take care of them, and choosing Playhouse Nursery was one of the best decisions I have ever made for my children. From the very beginning, the staff welcomed them with warmth, patience, and genuine affection. Knowing that my children were in a safe, caring, and nurturing environment gave me complete peace of mind. The teachers have played such an important role in their growth, development, and happiness. I truly appreciate the dedication, kindness, and professionalism of the entire Playhouse Nursery team. They have become like a second family to my children, and I will always be thankful for the wonderful care they provide every day. Highly recommended for any parent looking for a loving and trustworthy nursery for their little ones. ❤️",
+      "since": "Parent review"
+    },
+    {
+      "name": "Wala' Khader",
+      "branch": "Al Reem",
+      "rating": 5,
+      "text": "My daughter has been attending Playhouse Nursery on Al Reem Island since she was 5 months old, and now she is getting ready to start school. Looking back, I couldn't have chosen a better place for her early years. She truly considers Playhouse her second home. The teachers and all the staff are exceptional—kind, caring, patient, and genuinely loving. They have always treated my daughter with so much warmth while helping her grow into a confident and happy little girl. They consistently did their best to accommodate our schedule and were incredibly supportive whenever unexpected situations came up. Thank you to everyone at Playhouse for the love, care, and dedication you've shown over the years. We will always be grateful for the wonderful time you gave our daughter.",
+      "since": "Parent review"
+    },
+    {
+      "name": "Amjad Al Habbal",
+      "branch": "Al Reem",
+      "rating": 5,
+      "text": "Finding a place you can genuinely trust with your children is not easy! Our kids have been attending Playhouse since they were tiny, and over time I've seen how much the environment and the staff have contributed to their confidence and development. What stood out to me most is how consistent the team is — every day, the teachers greet the children with positivity, patience, and a calm attitude that makes drop-offs so much easier. My kids settled in quickly, and I could see they were comfortable, stimulated, and well looked after. The staff communicate with care, pay attention to the small details, and genuinely care about the children's wellbeing. I've watched our kids grow socially and emotionally during their time there, and I credit a part of that to the way the nursery is run. It feels organized, safe, and full of warmth. As parents, that's exactly what we hoped for!",
+      "since": "Parent review"
+    },
+    {
+      "name": "Sara Al Mansoori",
+      "branch": "Khalidiya",
+      "rating": 5,
+      "text": "Playhouse Khalidiya has been an incredible experience for our daughter. The teachers are warm, patient, and genuinely passionate about early education. She started at 10 months and has flourished in every way.",
+      "since": "Parent since 2022"
+    },
+    {
+      "name": "David & Emma Thompson",
+      "branch": "Al Reem",
+      "rating": 5,
+      "text": "Moving to Abu Dhabi, we were worried about finding a nursery that matched British standards. Playhouse Al Reem exceeded every expectation. The EYFS curriculum, the communication with parents, and the team are exceptional.",
+      "since": "Parent since 2021"
+    },
+    {
+      "name": "Fatima Khalid",
+      "branch": "Mirdif",
+      "rating": 5,
+      "text": "My son used to cry every morning before nursery at his old school. Since joining Playhouse Mirdif, he wakes up excited to go. The nature garden and outdoor learning are fantastic.",
+      "since": "Parent since 2023"
+    },
+    {
+      "name": "Ravi & Priya Nair",
+      "branch": "Khalidiya",
+      "rating": 5,
+      "text": "The level of care and attention our twins receive is extraordinary. Four fresh meals a day, a qualified nurse on-site, and constant updates via the parent app — we feel completely at ease.",
+      "since": "Parent since 2022"
+    },
+    {
+      "name": "Aisha Mohammed",
+      "branch": "Al Reem",
+      "rating": 5,
+      "text": "The bilingual environment at Al Reem is exactly what we wanted for our daughter. She now speaks confidently in both English and Arabic at just 3 years old. The music and arts programme is also superb.",
+      "since": "Parent since 2023"
+    },
+    {
+      "name": "James & Claire Bennett",
+      "branch": "Mirdif",
+      "rating": 5,
+      "text": "The mall location makes daily drop-off so convenient. But more importantly, the quality of teaching is outstanding. Our son graduated from Playhouse Mirdif ready for Year 1 and thrived from day one.",
+      "since": "Parent since 2020"
+    },
+    {
+      "name": "Noura Al Hamdan",
+      "branch": "Khalidiya",
+      "rating": 5,
+      "text": "What sets Playhouse apart is the genuine warmth of the staff. They remember every child's preferences, their mood patterns, and celebrate every small milestone. It feels like a real family.",
+      "since": "Parent since 2021"
+    },
+    {
+      "name": "Michael O'Brien",
+      "branch": "Al Reem",
+      "rating": 5,
+      "text": "As a parent from Ireland, finding a nursery with British EYFS was essential. The Al Reem branch delivers at the highest level — organised, caring, professional. Our daughter absolutely loves it.",
+      "since": "Parent since 2023"
+    },
+    {
+      "name": "Hana Al Shehhi",
+      "branch": "Mirdif",
+      "rating": 5,
+      "text": "We enrolled our son at 45 days in the Baby Nest programme and have watched him grow into a confident, curious 4-year-old. Playhouse has been part of his journey from the very beginning.",
+      "since": "Parent since 2020"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Ms. Saloni",
+      "role": "Principal",
+      "emoji": "👩‍💼",
+      "bg": "linear-gradient(135deg, #FFD1A9 0%, #FFB07C 100%)",
+      "quals": [
+        "Nursing Assistant Trained",
+        "13 years in education field"
+      ]
+    },
+    {
+      "name": "Ms. Maricel",
+      "role": "Secretary",
+      "emoji": "👩‍💻",
+      "bg": "linear-gradient(135deg, #B3E5FC 0%, #81D4FA 100%)",
+      "quals": [
+        "Bachelor's degree in Commerce",
+        "Nursing Assistant Trained",
+        "20 years in administration"
+      ]
+    },
+    {
+      "name": "Ms. Omaya",
+      "role": "Teacher",
+      "emoji": "👩‍🏫",
+      "bg": "linear-gradient(135deg, #C8E6C9 0%, #A5D6A7 100%)",
+      "quals": [
+        "Bachelor's degree in Art",
+        "Cache Level 3",
+        "7 years in early years"
+      ]
+    },
+    {
+      "name": "Ms. Sharmila",
+      "role": "Teacher",
+      "emoji": "👩‍🏫",
+      "bg": "linear-gradient(135deg, #F8BBD0 0%, #F48FB1 100%)",
+      "quals": [
+        "Bachelor's degree in Montessori",
+        "13 years in early years"
+      ]
+    },
+    {
+      "name": "Ms. Aya",
+      "role": "Teacher",
+      "emoji": "👩‍🏫",
+      "bg": "linear-gradient(135deg, #D1C4E9 0%, #B39DDB 100%)",
+      "quals": [
+        "General Diploma in Education",
+        "4 years in early years"
+      ]
+    },
+    {
+      "name": "Ms. Wilsie",
+      "role": "Assistant Teacher",
+      "emoji": "👩‍🎓",
+      "bg": "linear-gradient(135deg, #FFECB3 0%, #FFE082 100%)",
+      "quals": [
+        "Bachelor's degree in Elementary Education",
+        "8 years in early years"
+      ]
+    },
+    {
+      "name": "Ms. Dinithi",
+      "role": "Assistant Teacher",
+      "emoji": "👩‍🎓",
+      "bg": "linear-gradient(135deg, #E1BEE7 0%, #CE93D8 100%)",
+      "quals": [
+        "Diploma in Human Resource",
+        "Cache Level 2",
+        "3 years in early years"
+      ]
+    },
+    {
+      "name": "Ms. Anandjot",
+      "role": "Assistant Teacher",
+      "emoji": "👩‍🎓",
+      "bg": "linear-gradient(135deg, #B2DFDB 0%, #80CBC4 100%)",
+      "quals": [
+        "Bachelor's degree in Arts",
+        "Diploma of Elementary Education",
+        "8 years in early years"
+      ]
+    },
+    {
+      "name": "Ms. Rechilda",
+      "role": "Assistant Teacher",
+      "emoji": "👩‍🎓",
+      "bg": "linear-gradient(135deg, #FFCCBC 0%, #FFAB91 100%)",
+      "quals": [
+        "Bachelor's degree in Fine Arts",
+        "6 years in early years"
+      ]
+    },
+    {
+      "name": "Ms. Melissa",
+      "role": "Cleaner",
+      "emoji": "🧹",
+      "bg": "linear-gradient(135deg, #CFD8DC 0%, #B0BEC5 100%)",
+      "quals": [
+        "Nursing Assistant Training",
+        "High School Diploma",
+        "5 years experience"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What curriculum do you follow?",
+      "a": "We follow the British Early Years Foundation Stage (EYFS) curriculum, focusing on seven key areas of learning through play and inquiry."
+    },
+    {
+      "q": "What are your operating hours?",
+      "a": "All branches are open Monday to Friday, from 7:00 AM to 6:00 PM. We offer flexible attendance options including half-day and full-day sessions."
+    },
+    {
+      "q": "Do you provide meals for children, and can you accommodate special dietary requirements?",
+      "a": "Yes! We provide healthy, balanced meals that are nutritious and enjoyable for children. We also cater to a wide range of dietary requirements, including food allergies, religious dietary needs, and personal preferences. During the enrollment process, we work closely with parents to ensure each child's meals are safe, suitable, and tailored to their individual needs."
+    },
+    {
+      "q": "What is the child-to-staff ratio?",
+      "a": "Our ratios adhere strictly to international standards: 1:3 for babies (under 1 year), 1:5 for toddlers (1-2 years), and 1:8 for foundation stages (2+ years)."
+    },
+    {
+      "q": "Is School Readiness available at all branches?",
+      "a": "Our School Readiness program (4 – 5 years) is available at our Dubai branch. For our Abu Dhabi branches, we offer programs for children up to 4 years old, which fully prepares them for their transition to primary schools."
+    }
+  ],
+  "blogs": [
+    {
+      "id": "blog-1",
+      "title": "Preparing Your Child for the First Day of Nursery",
+      "slug": "preparing-child-first-day-nursery",
+      "date": "2026-07-06",
+      "category": "Parenting",
+      "excerpt": "Practical tips and routines to make the transition smooth, happy, and tear-free for both parents and little ones.",
+      "content": "### The First Day Transition\n\nStarting nursery is a major milestone for both you and your child. While it is an exciting adventure, it can also bring separation anxiety and a bit of worry. Here are a few simple tips from our educators at Playhouse Nursery to make the transition smooth and happy:\n\n1. **Visit the Nursery Together**\nBefore the official start date, bring your child for a short visit. Let them explore the classrooms, meet their teacher, and play with some of the toys. This helps build familiarity.\n\n2. **Establish a Morning Routine**\nStart practicing your school-day morning routine a week in advance. Consistent times for waking up, eating breakfast, and dressing will help your child feel secure.\n\n3. **Keep Goodbyes Brief**\nWhen dropping your child off, keep your farewells loving but brief. A long, drawn-out goodbye can increase anxiety. Reassure them that you will return, give a warm hug, and let their teacher guide them in.\n\n4. **Talk About Nursery Positively**\nRead books about starting school, and talk about all the fun activities, new friends, and sensory play they will enjoy.\n\nAt Playhouse Nursery, we work closely with every parent during the onboarding phase to ensure each child settles in at their own pace.",
+      "coverImage": "/images/gallery/sensory-play.jpg"
+    },
+    {
+      "id": "blog-2",
+      "title": "The Power of Sensory Play in Early Childhood",
+      "slug": "power-of-sensory-play-early-childhood",
+      "date": "2026-07-04",
+      "category": "Education",
+      "excerpt": "Discover how messy play, sand, water, and textured materials stimulate brain development and build cognitive skills.",
+      "content": "### Why Messy Play Matters\n\nChildren are natural explorers. From the moment they are born, they use their senses to understand the world around them. Sensory play — activities that stimulate touch, smell, sight, taste, and hearing — plays a crucial role in early brain development.\n\n#### Key Benefits of Sensory Play:\n\n* **Cognitive Development:** When children touch different textures (like sand, slime, or water), their brains build new neural pathways, enhancing problem-solving skills.\n* **Fine and Gross Motor Skills:** Squeezing dough, pouring water, and grasping small items strengthen hand-eye coordination and pre-writing muscles.\n* **Language Skills:** Describing how things feel (soft, rough, cold, sticky) helps expand a child's vocabulary naturally.\n* **Emotional Regulation:** Sensory play is highly therapeutic. Sifting sand or playing with warm water can soothe a frustrated or overstimulated child.\n\nAt Playhouse Nursery, sensory exploration is integrated daily. From our Baby Nest sensory rooms to outdoor mud kitchens, we provide safe, creative spaces for children to get messy and learn.",
+      "coverImage": "/images/gallery/art-class.jpg"
+    }
+  ],
+  "pages": [
+    {
+      "id": "page-1",
+      "title": "Safety Standards",
+      "slug": "about/safety-standards",
+      "bannerImage": "/images/gallery/sensory-play.jpg",
+      "metaDescription": "Read about our nursery safety and security protocols.",
+      "sections": [
+        {
+          "type": "Hero",
+          "title": "Safety First at Playhouse",
+          "subtitle": "We maintain international childcare safety and security guidelines across all campuses.",
+          "bgImage": "/images/gallery/sensory-play.jpg",
+          "buttonText": "Contact Admissions",
+          "buttonLink": "/#contact"
+        },
+        {
+          "type": "TextContent",
+          "title": "Our Security Promise",
+          "content": "Playhouse Nursery was founded with a single mission: to create a warm, secure, and inspiring second home. Child safety is at the core of everything we do.\n\n* **Trained Medical Staff:** Fully certified pediatric nurses reside full-time at each of our branches.\n* **Pediatric First-Aid:** All teachers and assistants undergo regular first-aid drills.\n* **Child-Friendly Furniture:** Rounded edges, anti-slip flooring, and finger-guards on doors protect kids during play."
+        },
+        {
+          "type": "FeaturesGrid",
+          "title": "Health & Safety Infrastructure",
+          "cards": [
+            {
+              "title": "Biometric Access Gates",
+              "icon": "🔒",
+              "description": "Double-verification keycards and security personnel at all entry checkpoints."
+            },
+            {
+              "title": "24/7 CCTV Coverage",
+              "icon": "📹",
+              "description": "Full monitoring across classrooms, sensory rooms, and outdoor play yards."
+            },
+            {
+              "title": "Daily Sanitization",
+              "icon": "🧼",
+              "description": "Eco-friendly, child-safe deep disinfection of toys and common spaces."
+            }
+          ]
+        },
+        {
+          "type": "CTA",
+          "title": "Book a Tour",
+          "description": "Visit any of our campuses to view our security measures firsthand.",
+          "buttonText": "Schedule a Visit",
+          "buttonLink": "/admissions",
+          "bgColor": "linear-gradient(135deg, #1A1A2E 0%, #FF6B35 100%)"
+        }
+      ]
+    }
+  ]
+}

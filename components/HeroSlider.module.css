@@ -1,0 +1,62 @@
+.slider {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* No fade — instant switch. First image shows immediately. */
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  /* intentionally NO transition */
+}
+
+.slideActive {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Dilute overlay — washes images down so text pops */
+.slide::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 252, 245, 0.22);   /* warm cream wash */
+  mix-blend-mode: lighten;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.dots {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 5;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  background: transparent;
+  cursor: pointer;
+  transition: width 0.3s ease, border-radius 0.3s ease, background 0.3s ease;
+  padding: 0;
+}
+
+.dotActive {
+  width: 28px;
+  border-radius: 4px;
+  background: var(--white);
+  border-color: var(--white);
+}
+
+.dot:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
